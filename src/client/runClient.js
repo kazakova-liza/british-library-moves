@@ -183,12 +183,13 @@ ws.onmessage = function (e) {
                 svgDoc.getElementById(element.id).textContent = element.value;
             }
             const startingPoint = svgDoc.getElementById('line_1');
-            const pixelsPerDay = Math.round(150 / 20);
+            const pixelsPerDay = Math.round(80 / 20);
             const pixelsPerMove = 269 - 207;
             const x0 = parseInt(startingPoint.attributes["x1"].value);
             const y0 = parseInt(startingPoint.attributes["y1"].value) + 6;
             let x1;
             let y1;
+            let color;
             if (element.number === 1) {
                 x1 = x0.toString();
                 y1 = y0.toString();
@@ -200,8 +201,13 @@ ws.onmessage = function (e) {
             const width = (pixelsPerDay * element.duration).toString();
             console.log(x1, y1);
             const svgArea = svgDoc.getElementById('Desktop-HD');
-            svgArea.innerHTML = svgArea.innerHTML + `<rect xmlns="http://www.w3.org/2000/svg" id = "Rectangle100" fill = "#73B7D5" x = "${x1}" y = "${y1}" width = "${width}" height = "51"></rect>`;
-
+            if (element.type === 'Move') {
+                color = '#73B7D5';
+            }
+            else {
+                color = '#E1D382';
+            }
+            svgArea.innerHTML = svgArea.innerHTML + `<rect xmlns="http://www.w3.org/2000/svg" id = "Rectangle100" fill = "${color}" x = "${x1}" y = "${y1}" width = "${width}" height = "51"></rect>`;
         }
     }
 

@@ -24,6 +24,7 @@ const showMoves = () => {
         svgUpdate.push({
             id: `move_${moveNumber}`,
             ref: move.ref,
+            type: move.type,
             number: moveNumber,
             value,
             condition: move.condition,
