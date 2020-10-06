@@ -142,10 +142,11 @@ document.getElementById('svg1').addEventListener('load', function () {
     panZoom.fit();
     panZoom.resize();
 
-    const fixedElement = svgDoc.getElementById('sticky');
-    fixedElement.setAttribute('y', svgElement.scrollTop + 50);
-    svgElement.addEventListener('scroll', function () {
-        fixedElement.setAttribute('y', svgElement.scrollTop + 50);
+    const fixedElement = svgDoc.getElementById('sticky-svg');
+    const container = document.getElementById('container');
+    fixedElement.setAttribute('x', container.scrollLeft);
+    container.addEventListener('scroll', function () {
+        fixedElement.setAttribute('x', container.scrollLeft);
     });
 })
 
