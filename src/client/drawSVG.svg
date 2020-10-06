@@ -1,20 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="2000px" height="1024px" viewBox="0 0 2000 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="7000px" height="2500px" viewBox="0 0 7000 2500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Desktop HD</title>
     <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <line x1="40" y1="198.5" x2="1951" y2="198.5" id="Line" stroke="#979797" stroke-linecap="square"></line>
-        <rect id="Rectangle" fill="#FAFAFA" x="39" y="199" width="1911" height="64"></rect>
-        <rect id="Rectangle-Copy-2" fill="#FAFAFA" x="39" y="326" width="1911" height="64"></rect>
-        <rect id="Rectangle-Copy-4" fill="#FAFAFA" x="39" y="454" width="1911" height="64"></rect>
-        <rect id="Rectangle-Copy-6" fill="#FAFAFA" x="39" y="582" width="1911" height="64"></rect>
-        <rect id="Rectangle-Copy-8" fill="#FAFAFA" x="39" y="710" width="1911" height="64"></rect>
-        <rect id="Rectangle-Copy-10" fill="#FAFAFA" x="39" y="838" width="1911" height="64"></rect>
-        <rect id="Rectangle-Copy" fill="#FFFFFF" x="39" y="262" width="1911" height="64"></rect>
-        <rect id="Rectangle-Copy-3" fill="#FFFFFF" x="39" y="390" width="1911" height="64"></rect>
-        <rect id="Rectangle-Copy-7" fill="#FFFFFF" x="39" y="646" width="1911" height="64"></rect>
-        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="39" y="774" width="1911" height="64"></rect>
-        <rect id="Rectangle-Copy-5" fill="#FFFFFF" x="39" y="518" width="1911" height="64"></rect>
+        <line x1="43" y1="198.5" x2="6853" y2="198.5" id="Line" stroke="#979797" stroke-linecap="square"></line>
+        <rect id="Rectangle" fill="#FAFAFA" x="39" y="199" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-2" fill="#FAFAFA" x="39" y="326" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-4" fill="#FAFAFA" x="39" y="454" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-6" fill="#FAFAFA" x="39" y="582" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-8" fill="#FAFAFA" x="39" y="710" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-10" fill="#FAFAFA" x="39" y="838" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy" fill="#FFFFFF" x="39" y="262" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-3" fill="#FFFFFF" x="39" y="390" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-7" fill="#FFFFFF" x="39" y="646" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="39" y="774" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-10" fill="#FAFAFA" x="39" y="967" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="39" y="903" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-10" fill="#FAFAFA" x="39" y="1095" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="39" y="1031" width="3210" height="64"></rect>
+        <rect id="Rectangle-Copy-10" fill="#FAFAFA" x="39" y="1223" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="39" y="1159" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-10" fill="#FAFAFA" x="43" y="1351" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="43" y="1287" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-10" fill="#FAFAFA" x="39" y="1480" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="39" y="1416" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-12" fill="#FAFAFA" x="43" y="1608" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-11" fill="#FFFFFF" x="43" y="1544" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-14" fill="#FAFAFA" x="43" y="1737" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-13" fill="#FFFFFF" x="43" y="1673" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-10" fill="#FAFAFA" x="43" y="1866" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="43" y="1802" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-10" fill="#FAFAFA" x="43" y="1995" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="43" y="1931" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-10" fill="#FAFAFA" x="43" y="2123" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-9" fill="#FFFFFF" x="41" y="2059" width="3210" height="64"></rect>
+        <rect id="Rectangle-Copy-16" fill="#FAFAFA" x="43" y="2252" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-15" fill="#FFFFFF" x="43" y="2188" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-18" fill="#FAFAFA" x="43" y="2380" width="6810" height="64"></rect>
+        <rect id="Rectangle-Copy-17" fill="#FFFFFF" x="41" y="2316" width="3210" height="64"></rect>
+        <rect id="Rectangle-Copy-5" fill="#FFFFFF" x="39" y="518" width="6810" height="64"></rect>
         <g id="moves" transform="translate(55.000000, 199.000000)" fill="#3B3B3B" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300">
+            <text id="move_35">
+                <tspan x="0" y="2201">-</tspan>
+            </text>
+            <text id="move_34">
+                <tspan x="0" y="2136">-</tspan>
+            </text>
+            <text id="move_33">
+                <tspan x="0" y="2077">-</tspan>
+            </text>
+            <text id="move_32">
+                <tspan x="0" y="2012">-</tspan>
+            </text>
+            <text id="move_31">
+                <tspan x="0" y="1947">-</tspan>
+            </text>
+            <text id="move_30">
+                <tspan x="0" y="1882">-</tspan>
+            </text>
+            <text id="move_29">
+                <tspan x="0" y="1817">-</tspan>
+            </text>
+            <text id="move_28">
+                <tspan x="0" y="1752">-</tspan>
+            </text>
+            <text id="move_27">
+                <tspan x="0" y="1687">-</tspan>
+            </text>
+            <text id="move_26">
+                <tspan x="0" y="1628">-</tspan>
+            </text>
+            <text id="move_25">
+                <tspan x="0" y="1563">-</tspan>
+            </text>
+            <text id="move_24">
+                <tspan x="0" y="1498">-</tspan>
+            </text>
+            <text id="move_23">
+                <tspan x="0" y="1433">-</tspan>
+            </text>
+            <text id="move_22">
+                <tspan x="0" y="1368">-</tspan>
+            </text>
+            <text id="move_21">
+                <tspan x="0" y="1304">-</tspan>
+            </text>
+            <text id="move_20">
+                <tspan x="0" y="1239">-</tspan>
+            </text>
+            <text id="move_19">
+                <tspan x="0" y="1175">-</tspan>
+            </text>
+            <text id="move_18">
+                <tspan x="0" y="1110">-</tspan>
+            </text>
+            <text id="move_17">
+                <tspan x="0" y="1046">-</tspan>
+            </text>
+            <text id="move_16">
+                <tspan x="0" y="984">-</tspan>
+            </text>
+            <text id="move_15">
+                <tspan x="0" y="919">-</tspan>
+            </text>
+            <text id="move_14">
+                <tspan x="0" y="854">-</tspan>
+            </text>
+            <text id="move_13">
+                <tspan x="0" y="790">-</tspan>
+            </text>
+            <text id="move_12">
+                <tspan x="0" y="725">-</tspan>
+            </text>
             <text id="move_11">
                 <tspan x="0" y="661">-</tspan>
             </text>
@@ -73,7 +169,119 @@
         <text id="140" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
             <tspan x="1750" y="185">140</tspan>
         </text>
-        <line x1="614.25" y1="199.25" x2="613.75" y2="1232.75" id="line_1" stroke="#979797" stroke-linecap="square"></line>
+        <text id="160" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="1927" y="185">160</tspan>
+        </text>
+        <text id="180" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="2104" y="185">180</tspan>
+            <tspan x="2104" y="214"></tspan>
+        </text>
+        <text id="200" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="2281" y="185">200</tspan>
+            <tspan x="2281" y="214"></tspan>
+            <tspan x="2281" y="243"></tspan>
+        </text>
+        <text id="220" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="2458" y="185">220</tspan>
+            <tspan x="2458" y="214"></tspan>
+            <tspan x="2458" y="243"></tspan>
+        </text>
+        <text id="240" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="2635" y="185">240</tspan>
+            <tspan x="2635" y="214"></tspan>
+            <tspan x="2635" y="243"></tspan>
+            <tspan x="2635" y="272"></tspan>
+        </text>
+        <text id="260" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="2812" y="185">260</tspan>
+            <tspan x="2812" y="214"></tspan>
+            <tspan x="2812" y="243"></tspan>
+            <tspan x="2812" y="272"></tspan>
+        </text>
+        <text id="280" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="2989" y="185">280</tspan>
+            <tspan x="2989" y="214"></tspan>
+            <tspan x="2989" y="243"></tspan>
+            <tspan x="2989" y="272"></tspan>
+        </text>
+        <text id="300" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="3166" y="185">300</tspan>
+            <tspan x="3166" y="214"></tspan>
+            <tspan x="3166" y="243"></tspan>
+            <tspan x="3166" y="272"></tspan>
+            <tspan x="3166" y="301"></tspan>
+        </text>
+        <text id="320" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="3343" y="185">320</tspan>
+            <tspan x="3343" y="214"></tspan>
+            <tspan x="3343" y="243"></tspan>
+            <tspan x="3343" y="272"></tspan>
+            <tspan x="3343" y="301"></tspan>
+        </text>
+        <text id="340" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="3520" y="185">340</tspan>
+            <tspan x="3520" y="214"></tspan>
+            <tspan x="3520" y="243"></tspan>
+            <tspan x="3520" y="272"></tspan>
+            <tspan x="3520" y="301"></tspan>
+        </text>
+        <text id="360" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="3697" y="185">360</tspan>
+            <tspan x="3697" y="214"></tspan>
+            <tspan x="3697" y="243"></tspan>
+            <tspan x="3697" y="272"></tspan>
+            <tspan x="3697" y="301"></tspan>
+        </text>
+        <text id="380" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="3874" y="185">380</tspan>
+            <tspan x="3874" y="214"></tspan>
+            <tspan x="3874" y="243"></tspan>
+            <tspan x="3874" y="272"></tspan>
+            <tspan x="3874" y="301"></tspan>
+        </text>
+        <text id="400" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="4051" y="185">400</tspan>
+            <tspan x="4051" y="214"></tspan>
+            <tspan x="4051" y="243"></tspan>
+            <tspan x="4051" y="272"></tspan>
+            <tspan x="4051" y="301"></tspan>
+        </text>
+        <text id="420" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="4228" y="185">420</tspan>
+            <tspan x="4228" y="214"></tspan>
+            <tspan x="4228" y="243"></tspan>
+            <tspan x="4228" y="272"></tspan>
+            <tspan x="4228" y="301"></tspan>
+        </text>
+        <text id="440" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="4405" y="185">440</tspan>
+            <tspan x="4405" y="214"></tspan>
+            <tspan x="4405" y="243"></tspan>
+            <tspan x="4405" y="272"></tspan>
+            <tspan x="4405" y="301"></tspan>
+        </text>
+        <text id="460" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="4582" y="185">460</tspan>
+            <tspan x="4582" y="214"></tspan>
+            <tspan x="4582" y="243"></tspan>
+            <tspan x="4582" y="272"></tspan>
+            <tspan x="4582" y="301"></tspan>
+        </text>
+        <text id="480" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="4759" y="185">480</tspan>
+            <tspan x="4759" y="214"></tspan>
+            <tspan x="4759" y="243"></tspan>
+            <tspan x="4759" y="272"></tspan>
+            <tspan x="4759" y="301"></tspan>
+        </text>
+        <text id="500" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300" fill="#3B3B3B">
+            <tspan x="4936" y="185">500</tspan>
+            <tspan x="4936" y="214"></tspan>
+            <tspan x="4936" y="243"></tspan>
+            <tspan x="4936" y="272"></tspan>
+            <tspan x="4936" y="301"></tspan>
+        </text>
+        <line x1="614.1875" y1="199.125" x2="614.5625" y2="2454.375" id="line_1" stroke="#979797" stroke-linecap="square"></line>
         <text id="British-Library-coll" font-family="Helvetica-Light, Helvetica" font-size="36" font-weight="300" fill="#000020">
             <tspan x="55" y="82">British Library collection moves</tspan>
         </text>

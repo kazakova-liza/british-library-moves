@@ -183,7 +183,7 @@ ws.onmessage = function (e) {
                 svgDoc.getElementById(element.id).textContent = element.value;
             }
             const startingPoint = svgDoc.getElementById('line_1');
-            const pixelsPerDay = Math.round(128 / 20);
+            const pixelsPerDay = Math.round(150 / 20);
             const pixelsPerMove = 269 - 207;
             const x0 = parseInt(startingPoint.attributes["x1"].value);
             const y0 = parseInt(startingPoint.attributes["y1"].value) + 6;
