@@ -27,6 +27,15 @@ const enableButtons = (buttonName) => {
 }
 
 const onStartClick = () => {
+    const svgObject = document.getElementById('svg1');
+    const svgDoc = svgObject.contentDocument;
+
+
+    if (svgDoc.getElementsByClassName('rectangle').length !== 0) {
+        const rectangles = [...svgDoc.getElementsByClassName('rectangle')];
+        rectangles.map((rectangle) => rectangle.remove())
+    }
+
     let command;
     if (document.getElementById('Variables table') === null) {
         command = {
@@ -115,11 +124,12 @@ const onPeriodClick = () => {
     ws.send(JSON.stringify(command));
 };
 
-// // const draw = SVG('#svg1');
-// let svgElement;
+let svgDoc;
+let svgElement;
 
 document.getElementById('svg1').addEventListener('load', function () {
-    const svgElement = document.getElementById('svg1');
+    svgElement = document.getElementById('svg1');
+    svgDoc = svgElement.contentDocument;
     var panZoom = svgPanZoom(svgElement, {
         zoomEnabled: true,
         controlIconsEnabled: true,
@@ -131,7 +141,16 @@ document.getElementById('svg1').addEventListener('load', function () {
     panZoom.zoom(1);
     panZoom.fit();
     panZoom.resize();
+
+    const fixedElement = svgDoc.getElementById('sticky');
+    fixedElement.setAttribute('y', svgElement.scrollTop + 50);
+    svgElement.addEventListener('scroll', function () {
+        fixedElement.setAttribute('y', svgElement.scrollTop + 50);
+    });
 })
+
+
+
 
 
 if (document.getElementById('table') !== undefined) {
@@ -207,7 +226,7 @@ ws.onmessage = function (e) {
             else {
                 color = '#E1D382';
             }
-            svgArea.innerHTML = svgArea.innerHTML + `<rect xmlns="http://www.w3.org/2000/svg" id = "Rectangle100" fill = "${color}" x = "${x1}" y = "${y1}" width = "${width}" height = "51"></rect>`;
+            svgArea.innerHTML = svgArea.innerHTML + `<rect xmlns="http://www.w3.org/2000/svg" id = "Rectangle100" class="rectangle" fill = "${color}" x = "${x1}" y = "${y1}" width = "${width}" height = "51"></rect>`;
         }
     }
 

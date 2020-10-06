@@ -7,6 +7,7 @@ const showMoves = () => {
     cache.moves.map((move) => {
         let value;
         let startDay;
+        let duration;
         const moveNumber = cache.moves.indexOf(move) + 1;
         if (move.condition === null) {
             startDay = 1;
@@ -21,6 +22,12 @@ const showMoves = () => {
         else {
             value = `${move.type} ${move.desc} from ${move.map1} to ${move.map2}`;
         }
+        if (move.desc === '') {
+            duration = move.duration;
+        }
+        else {
+            duration = move.length / objects.speeds[move.speed];
+        }
         svgUpdate.push({
             id: `move_${moveNumber}`,
             ref: move.ref,
@@ -28,10 +35,11 @@ const showMoves = () => {
             number: moveNumber,
             value,
             condition: move.condition,
-            duration: move.duration,
+            duration,
             startDay,
-            endDay: startDay + move.duration
+            endDay: startDay + duration
         })
+        // console.log(objects.speeds[move.speed] * move.length)
     })
     console.log(svgUpdate);
     return svgUpdate;
