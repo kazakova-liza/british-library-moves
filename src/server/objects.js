@@ -19,6 +19,10 @@ const objects = {
             svgShowOnTransitionId: undefined
         }
     ],
+    speeds: {
+        A: 0.2,
+        B: 0.25
+    }
 }
 
 export default objects;
