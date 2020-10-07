@@ -2,6 +2,17 @@ let dataForTable = [];
 let dates = [];
 let JSONtable;
 
+const makeSticky = () => {
+    const svgElement = document.getElementById('svg1');
+    const svgDoc = svgElement.contentDocument;
+    const fixedElement = svgDoc.getElementById('sticky-svg');
+    const container = document.getElementById('container');
+    fixedElement.setAttribute('x', container.scrollLeft);
+    container.addEventListener('scroll', function () {
+        fixedElement.setAttribute('x', container.scrollLeft);
+    });
+}
+
 const disableButtons = (buttonName) => {
     const buttons = ['start', 'period++', 'phase++', 'jump', 'dump'];
     if (buttonName === 'all') {
@@ -127,6 +138,8 @@ const onPeriodClick = () => {
 let svgDoc;
 let svgElement;
 
+
+
 document.getElementById('svg1').addEventListener('load', function () {
     svgElement = document.getElementById('svg1');
     svgDoc = svgElement.contentDocument;
@@ -142,16 +155,8 @@ document.getElementById('svg1').addEventListener('load', function () {
     panZoom.fit();
     panZoom.resize();
 
-    const fixedElement = svgDoc.getElementById('sticky-svg');
-    const container = document.getElementById('container');
-    fixedElement.setAttribute('x', container.scrollLeft);
-    container.addEventListener('scroll', function () {
-        fixedElement.setAttribute('x', container.scrollLeft);
-    });
+    // makeSticky();
 })
-
-
-
 
 
 if (document.getElementById('table') !== undefined) {
@@ -220,7 +225,7 @@ ws.onmessage = function (e) {
             }
             const width = (pixelsPerDay * element.duration).toString();
             console.log(x1, y1);
-            const svgArea = svgDoc.getElementById('Desktop-HD');
+            const svgArea = svgDoc.getElementById('Page-1');
             if (element.type === 'Move') {
                 color = '#73B7D5';
             }
@@ -229,6 +234,7 @@ ws.onmessage = function (e) {
             }
             svgArea.innerHTML = svgArea.innerHTML + `<rect xmlns="http://www.w3.org/2000/svg" id = "Rectangle100" class="rectangle" fill = "${color}" x = "${x1}" y = "${y1}" width = "${width}" height = "51"></rect>`;
         }
+        makeSticky();
     }
 
     if (message.topic == 'transitionUpdate') {
