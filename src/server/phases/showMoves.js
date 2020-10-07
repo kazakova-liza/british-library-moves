@@ -17,10 +17,10 @@ const showMoves = () => {
             startDay = dependency.endDay;
         }
         if (move.map2 === null) {
-            value = `${move.type} ${move.desc} at ${move.map1}`;
+            value = `${move.ref} ${move.type} ${move.desc} at ${move.map1}`;
         }
         else {
-            value = `${move.type} ${move.desc} from ${move.map1} to ${move.map2}`;
+            value = `${move.ref} ${move.type} ${move.desc} from ${move.map1} to ${move.map2}`;
         }
         if (move.desc === '') {
             duration = move.duration;
@@ -34,6 +34,8 @@ const showMoves = () => {
             type: move.type,
             number: moveNumber,
             value,
+            length: move.length,
+            speed: move.speed,
             condition: move.condition,
             duration,
             startDay,

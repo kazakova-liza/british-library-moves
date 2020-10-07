@@ -1,6 +1,8 @@
 let dataForTable = [];
 let dates = [];
 let JSONtable;
+let svgDoc;
+let svgElement;
 
 const disableButtons = (buttonName) => {
     const buttons = ['start', 'period++', 'phase++', 'jump', 'dump'];
@@ -29,12 +31,19 @@ const enableButtons = (buttonName) => {
 const onStartClick = () => {
     const svgObject = document.getElementById('svg1');
     const svgDoc = svgObject.contentDocument;
-
+    const variables = svgDoc.getElementById('variables');
+    const tspans = [...variables.getElementsByTagName('tspan')];
+    for (const tspan of tspans) {
+        tspan.textContent = '-';
+    }
 
     if (svgDoc.getElementsByClassName('rectangle').length !== 0) {
         const rectangles = [...svgDoc.getElementsByClassName('rectangle')];
         rectangles.map((rectangle) => rectangle.remove())
     }
+
+    dataForTable = [];
+
 
     let command;
     if (document.getElementById('Variables table') === null) {
@@ -53,6 +62,7 @@ const onStartClick = () => {
     }
     ws.send(JSON.stringify(command));
     disableButtons('start');
+
 };
 
 const onJumpClick = () => {
@@ -124,8 +134,6 @@ const onPeriodClick = () => {
     ws.send(JSON.stringify(command));
 };
 
-let svgDoc;
-let svgElement;
 
 document.getElementById('svg1').addEventListener('load', function () {
     svgElement = document.getElementById('svg1');
@@ -210,7 +218,7 @@ ws.onmessage = function (e) {
             }
             const width = (pixelsPerDay * element.duration).toString();
             console.log(x1, y1);
-            const svgArea = svgDoc.getElementById('Desktop-HD');
+            const svgArea = svgDoc.getElementById('Page-1');
             if (element.type === 'Move') {
                 color = '#73B7D5';
             }
@@ -218,6 +226,18 @@ ws.onmessage = function (e) {
                 color = '#E1D382';
             }
             svgArea.innerHTML = svgArea.innerHTML + `<rect xmlns="http://www.w3.org/2000/svg" id = "Rectangle100" class="rectangle" fill = "${color}" x = "${x1}" y = "${y1}" width = "${width}" height = "51"></rect>`;
+
+            dataForTable.push({
+                ref: element.ref,
+                name: element.value,
+                length: element.length,
+                speed: element.speed,
+                condition: element.condition,
+                duration: element.duration,
+                startDay: element.startDay,
+                endDay: element.endDay
+            })
+            JSONtable.innerHTML = json2Table(dataForTable);
         }
     }
 
