@@ -3,28 +3,16 @@ let dates = [];
 let JSONtable;
 let svgDoc;
 let svgElement;
+const buttons = ['start', 'period++', 'phase++', 'jump', 'dump'];
 
-const disableButtons = (buttonName) => {
-    const buttons = ['start', 'period++', 'phase++', 'jump', 'dump'];
+const disableButtons = (buttonName, boolean) => {
     if (buttonName === 'all') {
         for (const button of buttons) {
-            document.getElementById(button).disabled = true;
+            document.getElementById(button).disabled = boolean;
         }
     }
     else {
-        document.getElementById(buttonName).disabled = true;
-    }
-}
-
-const enableButtons = (buttonName) => {
-    const buttons = ['start', 'period++', 'phase++', 'jump', 'dump'];
-    if (buttonName === 'all') {
-        for (const button of buttons) {
-            document.getElementById(button).disabled = false;
-        }
-    }
-    else {
-        document.getElementById(buttonName).disabled = false;
+        document.getElementById(buttonName).disabled = boolean;
     }
 }
 
@@ -61,12 +49,12 @@ const onStartClick = () => {
         };
     }
     ws.send(JSON.stringify(command));
-    disableButtons('start');
+    disableButtons('start', true);
 
 };
 
 const onJumpClick = () => {
-    disableButtons('all');
+    disableButtons('all', true);
     const numberOfPeriods = document.getElementById('numberOfPeriods').value;
     const command = {
         topic: 'jump',
@@ -118,7 +106,7 @@ const onStopClick = () => {
 };
 
 const onPhaseClick = () => {
-    disableButtons('all');
+    disableButtons('all', true);
     const command = {
         topic: 'phase++',
     };
@@ -127,7 +115,7 @@ const onPhaseClick = () => {
 };
 
 const onPeriodClick = () => {
-    disableButtons('all');
+    disableButtons('all', true);
     const command = {
         topic: 'period++',
     };
@@ -168,6 +156,7 @@ ws.onopen = function () {
 
 ws.onmessage = function (e) {
     message = JSON.parse(e.data);
+    console.log(message);
     if (message.topic === 'inputs') {
         let html = '';
         for (const input of message.payload) {
@@ -180,11 +169,11 @@ ws.onmessage = function (e) {
     }
 
     if (message.topic == 'disableButtons') {
-        disableButtons(message.payload);
+        disableButtons(message.payload, true);
     }
 
     if (message.topic == 'enableButtons') {
-        enableButtons(message.payload);
+        disableButtons(message.payload, false);
     }
 
     if (message.topic == 'variablesUpdate') {
@@ -201,7 +190,7 @@ ws.onmessage = function (e) {
                 svgDoc.getElementById(element.id).textContent = element.value;
             }
             const startingPoint = svgDoc.getElementById('line_1');
-            const pixelsPerDay = Math.round(80 / 20);
+            const pixelsPerDay = 4;
             const pixelsPerMove = 269 - 207;
             const x0 = parseInt(startingPoint.attributes["x1"].value);
             const y0 = parseInt(startingPoint.attributes["y1"].value) + 6;
