@@ -1,168 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="6814px" height="2559px" viewBox="0 0 6814 2559" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="3773px" height="2554px" viewBox="0 0 3773 2554" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Untitled 7</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="drawSVG" transform="translate(0.000000, 5.000000)">
-            <polygon id="Rectangle-Copy-19-Copy" fill="#FFFFFF" fill-rule="nonzero" points="0 509 2885 509 2885 573 0 573 0 545.31281"></polygon>
-            <rect id="Rectangle-Copy-22" fill="#FFFFFF" fill-rule="nonzero" x="3929" y="2125" width="2885" height="64"></rect>
-            <rect id="Rectangle-Copy-24" fill="#FFFFFF" fill-rule="nonzero" x="1154.5" y="2291" width="576" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy" fill="#FFFFFF" fill-rule="nonzero" points="582 360 1158 360 1158 424 582 424 582 396.31281"></polygon>
-            <polygon id="Rectangle-Copy-Copy-2" fill="#FFFFFF" fill-rule="nonzero" points="657 362 3410 362 3410 426 657 426 657 398.31281"></polygon>
-            <rect id="Rectangle-Copy-2" fill="#FAFAFA" fill-rule="nonzero" x="657" y="298" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-3" fill="#FFFFFF" fill-rule="nonzero" points="657 490 3410 490 3410 554 657 554 657 526.31281"></polygon>
-            <rect id="Rectangle-Copy-3" fill="#FAFAFA" fill-rule="nonzero" x="657" y="426" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-4" fill="#FFFFFF" fill-rule="nonzero" points="657 618 3410 618 3410 682 657 682 657 654.31281"></polygon>
-            <rect id="Rectangle-Copy-4" fill="#FAFAFA" fill-rule="nonzero" x="657" y="554" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-5" fill="#FFFFFF" fill-rule="nonzero" points="657 746 3410 746 3410 810 657 810 657 782.31281"></polygon>
-            <rect id="Rectangle-Copy-5" fill="#FAFAFA" fill-rule="nonzero" x="657" y="682" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-6" fill="#FFFFFF" fill-rule="nonzero" points="657 874 3410 874 3410 938 657 938 657 910.31281"></polygon>
-            <rect id="Rectangle-Copy-6" fill="#FAFAFA" fill-rule="nonzero" x="657" y="810" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-7" fill="#FFFFFF" fill-rule="nonzero" points="657 1002 3410 1002 3410 1066 657 1066 657 1038.31281"></polygon>
-            <rect id="Rectangle-Copy-7" fill="#FAFAFA" fill-rule="nonzero" x="657" y="938" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-8" fill="#FFFFFF" fill-rule="nonzero" points="657 1130 3410 1130 3410 1194 657 1194 657 1166.31281"></polygon>
-            <rect id="Rectangle-Copy-8" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1066" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-9" fill="#FFFFFF" fill-rule="nonzero" points="657 1258 3410 1258 3410 1322 657 1322 657 1294.31281"></polygon>
-            <rect id="Rectangle-Copy-9" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1194" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-10" fill="#FFFFFF" fill-rule="nonzero" points="657 1386 3410 1386 3410 1450 657 1450 657 1422.31281"></polygon>
-            <rect id="Rectangle-Copy-10" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1322" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-11" fill="#FFFFFF" fill-rule="nonzero" points="657 1514 3410 1514 3410 1578 657 1578 657 1550.31281"></polygon>
-            <rect id="Rectangle-Copy-11" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1450" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-12" fill="#FFFFFF" fill-rule="nonzero" points="657 1642 3410 1642 3410 1706 657 1706 657 1678.31281"></polygon>
-            <rect id="Rectangle-Copy-12" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1578" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-13" fill="#FFFFFF" fill-rule="nonzero" points="657 1770 3410 1770 3410 1834 657 1834 657 1806.31281"></polygon>
-            <rect id="Rectangle-Copy-13" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1706" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-14" fill="#FFFFFF" fill-rule="nonzero" points="657 1898 3410 1898 3410 1962 657 1962 657 1934.31281"></polygon>
-            <rect id="Rectangle-Copy-14" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1834" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-15" fill="#FFFFFF" fill-rule="nonzero" points="657 2026 3410 2026 3410 2090 657 2090 657 2062.31281"></polygon>
-            <rect id="Rectangle-Copy-15" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1962" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-16" fill="#FFFFFF" fill-rule="nonzero" points="657 2154 3410 2154 3410 2218 657 2218 657 2190.31281"></polygon>
-            <rect id="Rectangle-Copy-16" fill="#FAFAFA" fill-rule="nonzero" x="657" y="2090" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-17" fill="#FFFFFF" fill-rule="nonzero" points="657 2282 3410 2282 3410 2346 657 2346 657 2318.31281"></polygon>
-            <rect id="Rectangle-Copy-17" fill="#FAFAFA" fill-rule="nonzero" x="657" y="2218" width="2753" height="64"></rect>
-            <polygon id="Rectangle-Copy-Copy-18" fill="#FFFFFF" fill-rule="nonzero" points="657 2410 3410 2410 3410 2474 657 2474 657 2446.31281"></polygon>
-            <rect id="Rectangle-Copy-18" fill="#FAFAFA" fill-rule="nonzero" x="657" y="2346" width="2753" height="64"></rect>
-            <g id="timeline" transform="translate(657.000000, 254.000000)" fill="#3B3B3B" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300">
-                <g id="400" transform="translate(1777.000000, 2.000000)">
+        <g id="drawSVG">
+            <polygon id="Rectangle-Copy-Copy-2" fill="#FFFFFF" fill-rule="nonzero" points="657 362 3773 362 3773 426 657 426 657 398.31281"></polygon>
+            <rect id="Rectangle-Copy-2" fill="#FAFAFA" fill-rule="nonzero" x="657" y="298" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-3" fill="#FFFFFF" fill-rule="nonzero" points="657 490 3773 490 3773 554 657 554 657 526.31281"></polygon>
+            <rect id="Rectangle-Copy-3" fill="#FAFAFA" fill-rule="nonzero" x="657" y="426" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-4" fill="#FFFFFF" fill-rule="nonzero" points="657 618 3773 618 3773 682 657 682 657 654.31281"></polygon>
+            <rect id="Rectangle-Copy-4" fill="#FAFAFA" fill-rule="nonzero" x="657" y="554" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-5" fill="#FFFFFF" fill-rule="nonzero" points="657 746 3773 746 3773 810 657 810 657 782.31281"></polygon>
+            <rect id="Rectangle-Copy-5" fill="#FAFAFA" fill-rule="nonzero" x="657" y="682" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-6" fill="#FFFFFF" fill-rule="nonzero" points="657 874 3773 874 3773 938 657 938 657 910.31281"></polygon>
+            <rect id="Rectangle-Copy-6" fill="#FAFAFA" fill-rule="nonzero" x="657" y="810" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-7" fill="#FFFFFF" fill-rule="nonzero" points="657 1002 3773 1002 3773 1066 657 1066 657 1038.31281"></polygon>
+            <rect id="Rectangle-Copy-7" fill="#FAFAFA" fill-rule="nonzero" x="657" y="938" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-8" fill="#FFFFFF" fill-rule="nonzero" points="657 1130 3773 1130 3773 1194 657 1194 657 1166.31281"></polygon>
+            <rect id="Rectangle-Copy-8" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1066" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-9" fill="#FFFFFF" fill-rule="nonzero" points="657 1258 3773 1258 3773 1322 657 1322 657 1294.31281"></polygon>
+            <rect id="Rectangle-Copy-9" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1194" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-10" fill="#FFFFFF" fill-rule="nonzero" points="657 1386 3773 1386 3773 1450 657 1450 657 1422.31281"></polygon>
+            <rect id="Rectangle-Copy-10" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1322" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-11" fill="#FFFFFF" fill-rule="nonzero" points="657 1514 3773 1514 3773 1578 657 1578 657 1550.31281"></polygon>
+            <rect id="Rectangle-Copy-11" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1450" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-12" fill="#FFFFFF" fill-rule="nonzero" points="657 1642 3773 1642 3773 1706 657 1706 657 1678.31281"></polygon>
+            <rect id="Rectangle-Copy-12" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1578" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-13" fill="#FFFFFF" fill-rule="nonzero" points="657 1770 3773 1770 3773 1834 657 1834 657 1806.31281"></polygon>
+            <rect id="Rectangle-Copy-13" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1706" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-14" fill="#FFFFFF" fill-rule="nonzero" points="657 1898 3773 1898 3773 1962 657 1962 657 1934.31281"></polygon>
+            <rect id="Rectangle-Copy-14" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1834" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-15" fill="#FFFFFF" fill-rule="nonzero" points="657 2026 3773 2026 3773 2090 657 2090 657 2062.31281"></polygon>
+            <rect id="Rectangle-Copy-15" fill="#FAFAFA" fill-rule="nonzero" x="657" y="1962" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-16" fill="#FFFFFF" fill-rule="nonzero" points="657 2154 3773 2154 3773 2218 657 2218 657 2190.31281"></polygon>
+            <rect id="Rectangle-Copy-16" fill="#FAFAFA" fill-rule="nonzero" x="657" y="2090" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-17" fill="#FFFFFF" fill-rule="nonzero" points="657 2282 3773 2282 3773 2346 657 2346 657 2318.31281"></polygon>
+            <rect id="Rectangle-Copy-17" fill="#FAFAFA" fill-rule="nonzero" x="657" y="2218" width="3116" height="64"></rect>
+            <polygon id="Rectangle-Copy-Copy-18" fill="#FFFFFF" fill-rule="nonzero" points="657 2410 3773 2410 3773 2474 657 2474 657 2446.31281"></polygon>
+            <rect id="Rectangle-Copy-18" fill="#FAFAFA" fill-rule="nonzero" x="657" y="2346" width="3116" height="64"></rect>
+            <g id="timeline" transform="translate(657.000000, 265.000000)" fill="#3B3B3B" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300">
+                <g id="400" transform="translate(1910.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">400</tspan>
                     </text>
                 </g>
-                <g id="420" transform="translate(1871.000000, 2.000000)">
+                <g id="420" transform="translate(2006.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">420</tspan>
                     </text>
                 </g>
-                <g id="440" transform="translate(1965.000000, 2.000000)">
+                <g id="440" transform="translate(2102.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">440</tspan>
                     </text>
                 </g>
-                <g id="460" transform="translate(2059.000000, 2.000000)">
+                <g id="460" transform="translate(2198.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">460</tspan>
                     </text>
                 </g>
-                <g id="480" transform="translate(2153.000000, 2.000000)">
+                <g id="480" transform="translate(2294.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">480</tspan>
                     </text>
                 </g>
-                <g id="500" transform="translate(2247.000000, 2.000000)">
+                <g id="500" transform="translate(2390.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">500</tspan>
                     </text>
                 </g>
-                <g id="20" transform="translate(67.000000, 0.000000)">
+                <g id="20" transform="translate(94.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">20</tspan>
                     </text>
                 </g>
-                <g id="40" transform="translate(142.000000, 1.000000)">
+                <g id="40" transform="translate(188.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">40</tspan>
                     </text>
                 </g>
-                <g id="60" transform="translate(217.000000, 0.000000)">
+                <g id="60" transform="translate(282.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">60</tspan>
                     </text>
                 </g>
-                <g id="80" transform="translate(292.000000, 1.000000)">
+                <g id="80" transform="translate(376.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">80</tspan>
                     </text>
                 </g>
-                <g id="100" transform="translate(367.000000, 0.000000)">
+                <g id="100" transform="translate(470.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">100</tspan>
                     </text>
                 </g>
-                <g id="120" transform="translate(461.000000, 1.000000)">
+                <g id="120" transform="translate(566.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">120</tspan>
                     </text>
                 </g>
-                <g id="140" transform="translate(555.000000, 1.000000)">
+                <g id="140" transform="translate(662.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">140</tspan>
                     </text>
                 </g>
-                <g id="160" transform="translate(649.000000, 0.000000)">
+                <g id="160" transform="translate(758.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">160</tspan>
                     </text>
                 </g>
-                <g id="180" transform="translate(743.000000, 1.000000)">
+                <g id="180" transform="translate(854.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">180</tspan>
                     </text>
                 </g>
-                <g id="200" transform="translate(837.000000, 1.000000)">
+                <g id="200" transform="translate(950.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">200</tspan>
                     </text>
                 </g>
-                <g id="220" transform="translate(931.000000, 1.000000)">
+                <g id="220" transform="translate(1046.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">220</tspan>
                     </text>
                 </g>
-                <g id="240" transform="translate(1025.000000, 1.000000)">
+                <g id="240" transform="translate(1142.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">240</tspan>
                     </text>
                 </g>
-                <g id="260" transform="translate(1119.000000, 1.000000)">
+                <g id="260" transform="translate(1238.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">260</tspan>
                     </text>
                 </g>
-                <g id="280" transform="translate(1213.000000, 1.000000)">
+                <g id="280" transform="translate(1334.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">280</tspan>
                     </text>
                 </g>
-                <g id="300" transform="translate(1307.000000, 1.000000)">
+                <g id="300" transform="translate(1430.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">300</tspan>
                     </text>
                 </g>
-                <g id="320" transform="translate(1401.000000, 1.000000)">
+                <g id="320" transform="translate(1526.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">320</tspan>
                     </text>
                 </g>
-                <g id="340" transform="translate(1495.000000, 3.000000)">
+                <g id="340" transform="translate(1622.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">340</tspan>
                     </text>
                 </g>
-                <g id="360" transform="translate(1589.000000, 2.000000)">
+                <g id="360" transform="translate(1718.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">360</tspan>
                     </text>
                 </g>
-                <g id="380" transform="translate(1683.000000, 2.000000)">
+                <g id="380" transform="translate(1814.000000, 0.000000)">
                     <text>
                         <tspan x="0" y="23">380</tspan>
                     </text>
@@ -209,8 +205,8 @@
                 <rect id="Rectangle-Copy-15" fill="#FFFFFF" fill-rule="nonzero" x="1" y="2152" width="654" height="64"></rect>
                 <rect id="Rectangle-Copy-17" fill="#FFFFFF" fill-rule="nonzero" x="1" y="2280" width="654" height="64"></rect>
                 <rect id="Rectangle-Copy-17" fill="#FFFFFF" fill-rule="nonzero" x="1" y="2408" width="654" height="64"></rect>
-                <line x1="657" y1="298" x2="657.375" y2="2553.25" id="line_1" stroke="#979797" stroke-linecap="square"></line>
-                <line x1="5" y1="297" x2="3332.5" y2="297.5" id="Line" stroke="#979797" stroke-linecap="square"></line>
+                <line x1="656" y1="298" x2="656.375" y2="2553.25" id="line_1" stroke="#979797" stroke-linecap="square"></line>
+                <line x1="5" y1="297" x2="3769.5" y2="297.5" id="Line" stroke="#979797" stroke-linecap="square"></line>
                 <text id="-" fill="#3B3B3B" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300">
                     <tspan x="38" y="2527">-</tspan>
                 </text>
@@ -218,188 +214,207 @@
                     <tspan x="12" y="58">British Library collection moves</tspan>
                 </text>
                 <text id="Total-length-moved:" fill="#000020" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-size="36" font-weight="300">
-                    <tspan x="12" y="125">Total length moved:</tspan>
-                </text>
-                <text id="length_moved" fill="#000020" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-size="36" font-weight="300">
-                    <tspan x="362" y="125">-</tspan>
-                </text>
-                <text id="maximum_day" fill="#000020" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-size="36" font-weight="300">
-                    <tspan x="284" y="186">-</tspan>
+                    <tspan x="12" y="154">Total length moved:</tspan>
                 </text>
                 <text id="Maximum-day:" fill="#000020" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-size="36" font-weight="300">
-                    <tspan x="12" y="186">Maximum day:</tspan>
+                    <tspan x="12" y="215">Maximum day:</tspan>
                 </text>
-                <g id="variables" transform="translate(38.000000, 316.000000)" fill="#3B3B3B" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-size="24" font-weight="300">
-                    <g id="move_1">
+                <g id="variables" transform="translate(38.000000, 119.000000)" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-weight="300">
+                    <g id="move_1" transform="translate(0.000000, 197.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_2" transform="translate(0.000000, 65.000000)">
+                    <g id="move_2" transform="translate(0.000000, 260.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_3" transform="translate(0.000000, 130.000000)">
+                    <g id="move_3" transform="translate(0.000000, 323.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_4" transform="translate(0.000000, 195.000000)">
+                    <g id="move_4" transform="translate(0.000000, 386.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_5" transform="translate(0.000000, 260.000000)">
+                    <g id="move_5" transform="translate(0.000000, 449.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_6" transform="translate(0.000000, 325.000000)">
+                    <g id="move_6" transform="translate(0.000000, 512.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_7" transform="translate(0.000000, 390.000000)">
+                    <g id="move_7" transform="translate(0.000000, 575.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_8" transform="translate(0.000000, 455.000000)">
+                    <g id="move_8" transform="translate(0.000000, 638.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_9" transform="translate(0.000000, 520.000000)">
+                    <g id="move_9" transform="translate(0.000000, 701.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_10" transform="translate(0.000000, 585.000000)">
+                    <g id="move_10" transform="translate(0.000000, 764.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_11" transform="translate(0.000000, 650.000000)">
+                    <g id="move_11" transform="translate(0.000000, 827.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_12" transform="translate(0.000000, 715.000000)">
+                    <g id="move_12" transform="translate(0.000000, 890.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_13" transform="translate(0.000000, 780.000000)">
+                    <g id="move_13" transform="translate(0.000000, 953.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_14" transform="translate(0.000000, 845.000000)">
+                    <g id="move_14" transform="translate(0.000000, 1016.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_15" transform="translate(0.000000, 910.000000)">
+                    <g id="move_15" transform="translate(0.000000, 1079.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_16" transform="translate(0.000000, 975.000000)">
+                    <g id="move_16" transform="translate(0.000000, 1142.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_17" transform="translate(0.000000, 1040.000000)">
+                    <g id="move_17" transform="translate(0.000000, 1205.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_18" transform="translate(0.000000, 2145.000000)">
+                    <g id="move_18" transform="translate(0.000000, 1268.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="move_19" transform="translate(0.000000, 1105.000000)">
+                    <g id="move_19" transform="translate(0.000000, 1331.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="-">
+                            <text>
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_20" transform="translate(0.000000, 1394.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="-">
+                            <text>
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_21" transform="translate(0.000000, 1457.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="-">
+                            <text>
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_22" transform="translate(0.000000, 1520.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="-">
+                            <text>
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_23" transform="translate(0.000000, 1583.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="Group">
+                            <text id="-">
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_24" transform="translate(0.000000, 1646.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="Group">
+                            <text id="-">
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_27" transform="translate(0.000000, 1772.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="Group">
+                            <text id="-">
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_26" transform="translate(0.000000, 1709.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="Group">
+                            <text id="-">
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_29" transform="translate(0.000000, 1898.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="Group">
+                            <text id="-">
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_28" transform="translate(0.000000, 1835.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="Group">
+                            <text id="-">
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_31" transform="translate(0.000000, 2024.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="Group">
+                            <text id="-">
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_33" transform="translate(0.000000, 2150.000000)" fill="#3B3B3B" font-size="24">
+                        <g id="Group">
+                            <text id="-">
+                                <tspan x="0" y="23">-</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="move_30" transform="translate(0.000000, 1961.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="-" transform="translate(0.000000, 1170.000000)">
-                        <text>
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="-" transform="translate(0.000000, 1235.000000)">
-                        <text>
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="-" transform="translate(0.000000, 1300.000000)">
-                        <text>
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="-" transform="translate(0.000000, 1365.000000)">
-                        <text>
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="Group" transform="translate(0.000000, 1495.000000)">
+                    <g id="move_35" transform="translate(0.000000, 2213.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="Group" transform="translate(0.000000, 1430.000000)">
+                    <g id="move_32" transform="translate(0.000000, 2087.000000)" fill="#3B3B3B" font-size="24">
                         <text id="-">
                             <tspan x="0" y="23">-</tspan>
                         </text>
                     </g>
-                    <g id="Group" transform="translate(0.000000, 1625.000000)">
-                        <text id="-">
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="Group" transform="translate(0.000000, 1560.000000)">
-                        <text id="-">
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="Group" transform="translate(0.000000, 1755.000000)">
-                        <text id="-">
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="Group" transform="translate(0.000000, 1690.000000)">
-                        <text id="-">
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="Group" transform="translate(0.000000, 1885.000000)">
-                        <text id="-">
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="Group" transform="translate(0.000000, 2015.000000)">
-                        <text id="-">
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="move_30" transform="translate(0.000000, 1820.000000)">
-                        <text id="-">
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="move_35" transform="translate(0.000000, 2080.000000)">
-                        <text id="-">
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
-                    <g id="move_32" transform="translate(0.000000, 1950.000000)">
-                        <text id="-">
-                            <tspan x="0" y="23">-</tspan>
-                        </text>
-                    </g>
+                    <text id="length_moved" fill="#000020" font-size="36">
+                        <tspan x="325" y="35">-</tspan>
+                    </text>
+                    <text id="maximum_day" fill="#000020" font-size="36">
+                        <tspan x="246" y="96">-</tspan>
+                    </text>
                 </g>
             </g>
         </g>

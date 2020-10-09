@@ -1,8 +1,10 @@
 let dataForTable = [];
 let dates = [];
 let JSONtable;
+let svgObject;
 let svgDoc;
 let svgElement;
+let command;
 const buttons = ['start', 'period++', 'phase++', 'jump', 'dump'];
 
 const disableButtons = (buttonName, boolean) => {
@@ -17,8 +19,6 @@ const disableButtons = (buttonName, boolean) => {
 }
 
 const onStartClick = () => {
-    const svgObject = document.getElementById('svg1');
-    const svgDoc = svgObject.contentDocument;
     const variables = svgDoc.getElementById('variables');
     const tspans = [...variables.getElementsByTagName('tspan')];
     for (const tspan of tspans) {
@@ -32,8 +32,6 @@ const onStartClick = () => {
 
     dataForTable = [];
 
-
-    let command;
     if (document.getElementById('Variables table') === null) {
         command = {
             topic: 'start',
@@ -56,7 +54,7 @@ const onStartClick = () => {
 const onJumpClick = () => {
     disableButtons('all', true);
     const numberOfPeriods = document.getElementById('numberOfPeriods').value;
-    const command = {
+    command = {
         topic: 'jump',
         payload: numberOfPeriods,
     };
@@ -64,7 +62,7 @@ const onJumpClick = () => {
 };
 
 const onDumpClick = () => {
-    const command = {
+    command = {
         topic: 'dump',
         payload: document.getElementById('mySQLTable').value
     }
@@ -99,7 +97,7 @@ const json2Table = (json) => {
 }
 
 const onStopClick = () => {
-    const command = {
+    command = {
         topic: 'stop',
     };
     ws.send(JSON.stringify(command));
@@ -107,7 +105,7 @@ const onStopClick = () => {
 
 const onPhaseClick = () => {
     disableButtons('all', true);
-    const command = {
+    command = {
         topic: 'phase++',
     };
     console.log(command);
@@ -116,7 +114,7 @@ const onPhaseClick = () => {
 
 const onPeriodClick = () => {
     disableButtons('all', true);
-    const command = {
+    command = {
         topic: 'period++',
     };
     ws.send(JSON.stringify(command));
@@ -147,7 +145,7 @@ if (document.getElementById('table') !== undefined) {
 const ws = new WebSocket('ws://localhost:50005/');
 ws.onopen = function () {
     console.log('WebSocket Client Connected');
-    const command = {
+    command = {
         topic: 'inputs',
     };
     ws.send(JSON.stringify(command));
@@ -179,9 +177,8 @@ ws.onmessage = function (e) {
     if (message.topic == 'variablesUpdate') {
         console.log(message);
         for (element of message.payload) {
-            const svgObject = document.getElementById('svg1');
-            const svgDoc = svgObject.contentDocument;
             const el = svgDoc.getElementById(element.id);
+            console.log(element.id)
             if (el.getElementsByTagName('tspan') !== undefined) {
                 const tspans = el.getElementsByTagName('tspan');
                 tspans[0].textContent = element.value;
@@ -190,23 +187,16 @@ ws.onmessage = function (e) {
                 svgDoc.getElementById(element.id).textContent = element.value;
             }
             const startingPoint = svgDoc.getElementById('line_1');
-            const pixelsPerDay = 4;
-            const pixelsPerMove = 269 - 207;
+            const pixelsPerDay = 4.9;
+            const pixelsPerMove = 65;
             const x0 = parseInt(startingPoint.attributes["x1"].value);
-            const y0 = parseInt(startingPoint.attributes["y1"].value) + 6;
-            let x1;
-            let y1;
+            const y0 = parseInt(startingPoint.attributes["y1"].value);
             let color;
-            if (element.number === 1) {
-                x1 = x0.toString();
-                y1 = y0.toString();
-            }
-            else {
-                x1 = (x0 + pixelsPerDay * element.startDay).toString();
-                y1 = (y0 + pixelsPerMove * (element.number - 1) + 6).toString();
-            }
-            const width = (pixelsPerDay * element.duration).toString();
-            console.log(x1, y1);
+            const x1 = x0;
+            const y1 = y0;
+            const xn = x1 - 5 + pixelsPerDay * element.startDay;
+            const yn = y1 + pixelsPerMove * (element.number - 1);
+            const width = pixelsPerDay * element.duration;
             const svgArea = svgDoc.getElementById('Page-1');
             if (element.type === 'Move') {
                 color = '#73B7D5';
@@ -214,18 +204,25 @@ ws.onmessage = function (e) {
             else {
                 color = '#E1D382';
             }
-            svgArea.innerHTML = svgArea.innerHTML + `<rect xmlns="http://www.w3.org/2000/svg" id = "Rectangle100" class="rectangle" fill = "${color}" x = "${x1}" y = "${y1}" width = "${width}" height = "51"></rect>`;
+            if (element.number === 1) {
+                svgArea.innerHTML = svgArea.innerHTML + `<rect xmlns="http://www.w3.org/2000/svg" id = "Rectangle100" class="rectangle" fill = "${color}" x = "${x1.toString()}" y = "${y1.toString()}" width = "${width.toString()}" height = "51"></rect>`;
+            }
+            else {
+                svgArea.innerHTML = svgArea.innerHTML + `<rect xmlns="http://www.w3.org/2000/svg" id = "Rectangle100" class="rectangle" fill = "${color}" x = "${xn.toString()}" y = "${yn.toString()}" width = "${width.toString()}" height = "51"></rect>`;
+            }
 
-            dataForTable.push({
-                ref: element.ref,
-                name: element.value,
-                length: element.length,
-                speed: element.speed,
-                condition: element.condition,
-                duration: element.duration,
-                startDay: element.startDay,
-                endDay: element.endDay
-            })
+
+            if (element.length !== undefined) {
+                dataForTable.push({
+                    name: element.value,
+                    length: element.length,
+                    speed: element.speed,
+                    condition: element.condition,
+                    duration: element.duration,
+                    startDay: element.startDay,
+                    endDay: element.endDay
+                })
+            }
             JSONtable.innerHTML = json2Table(dataForTable);
         }
     }
@@ -233,8 +230,6 @@ ws.onmessage = function (e) {
     if (message.topic == 'transitionUpdate') {
         console.log(message);
         for (element of message.payload) {
-            const svgObject = document.getElementById('svg1');
-            const svgDoc = svgObject.contentDocument;
             const el = svgDoc.getElementById(element.id);
             el.style.visibility = 'visible';
         }
@@ -242,8 +237,6 @@ ws.onmessage = function (e) {
 
     if (message.topic == 'setToNought') {
         console.log(message);
-        const svgObject = document.getElementById('svg1');
-        const svgDoc = svgObject.contentDocument;
         const elements = svgDoc.getElementsByClassName('variable');
         for (const element of elements) {
             element.textContent = '-';
@@ -261,8 +254,6 @@ ws.onmessage = function (e) {
 
     if (message.topic === 'svgUpdate') {
         console.log(message);
-        const svgObject = document.getElementById('svg1');
-        const svgDoc = svgObject.contentDocument;
         const elementToUpdate = svgDoc.getElementById(message.payload.id);
         console.log(elementToUpdate);
         elementToUpdate.style.fill = message.payload.color;
