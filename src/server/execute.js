@@ -33,7 +33,7 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                     }
                 }));
                 if (el.async !== undefined) {
-                    svgUpdate = await el.function();
+                    svgUpdate = await el.function(cache.currentPhase);
                 }
                 else {
                     svgUpdate = el.function();
@@ -89,7 +89,10 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                     color: "#bfbfbf"
                 }
             }));
-            cache.connection.sendUTF(JSON.stringify({ topic: 'variablesUpdate', payload: svgUpdate }));
+            cache.connection.sendUTF(JSON.stringify({
+                topic: 'variablesUpdate',
+                payload: svgUpdate
+            }));
         }
         if (i !== cache.currentPeriod + parseInt(numberOfPeriodsToExecute) - 1) {
             cache.connection.sendUTF(JSON.stringify({ topic: 'setToNought' }));

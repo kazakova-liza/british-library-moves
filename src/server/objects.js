@@ -1,4 +1,5 @@
-import showMoves from './phases/showMoves.js'
+import createGanttChart from './phases/createGanttChart.js'
+import createDay1 from './phases/day1.js'
 
 const objects = {
     inputs: [
@@ -11,7 +12,17 @@ const objects = {
         {
             number: 1,
             name: '1',
-            function: showMoves,
+            function: createGanttChart,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 2,
+            name: '2',
+            function: createDay1,
             textOnProcessing: 'processing',
             textOnCompletion: 'finished',
             async: false,

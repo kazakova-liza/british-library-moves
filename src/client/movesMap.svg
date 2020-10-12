@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5000px" height="5004px" viewBox="0 0 5000 5004" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Day 1</title>
+    <defs>
+        <linearGradient x1="50%" y1="-12.9890267%" x2="50%" y2="91.2118321%" id="linearGradient-1">
+            <stop stop-color="#959595" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Day-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="B06" transform="translate(530.000000, 521.000000)">
+            <g id="floor_7">
+                <path d="M855.438056,0.5 L970.387162,561.5 L614.45384,561.5 L599.222605,404.5 L396.134253,404.5 L379.550034,561.5 L0.6055269,561.5 L108.689653,0.5 L435.023476,0.5 L425.448213,97.5 L567.555184,97.5 L557.381625,0.5 L855.438056,0.5 Z" id="Combined-Shape-Copy-6" stroke="#979797" fill="url(#linearGradient-1)"></path>
+                <polygon id="zone_7_9" stroke="#979797" fill="#D8D8D8" points="426 97 567 97 598.768764 405 396.584219 405"></polygon>
+                <polygon id="zone_7_1" stroke="#979797" points="241 257.5 196.574219 562 380 562 409.5 257.5"></polygon>
+                <polygon id="zone_7_2" stroke="#979797" points="59.5039062 256.961318 0 562 196.574219 562 241 256.961318"></polygon>
+                <polygon id="zone_7_8" stroke="#979797" points="708.242188 0 745 256.5 583.537109 256.961318 556.826441 0"></polygon>
+                <polygon id="zone_7_7" stroke="#979797" points="908.535156 256.961318 745 256.961318 708.242188 -5.70568743e-14 855.845994 -5.68434189e-14"></polygon>
+                <polygon id="zone_7_5" points="583.537109 256.961318 745 256.961318 790.105469 562 614 562"></polygon>
+                <polygon id="zone_7_6" stroke="#979797" points="745 256.961318 908.535156 256.730659 971 562 790.105469 562"></polygon>
+                <polygon id="zone_7_3" stroke="#979797" points="108.772883 0 60 256.961318 241.496094 256.961318 279.277344 0"></polygon>
+                <polygon id="zone_7_4" stroke="#979797" points="278.78125 -7.08433963e-15 435.575263 -7.08433963e-15 409.5 257.25 241 257.5"></polygon>
+            </g>
+            <g id="floor_6" transform="translate(0.000000, 680.000000)">
+                <path d="M855.438056,0.5 L970.387162,561.5 L614.45384,561.5 L599.222605,404.5 L396.134253,404.5 L379.550034,561.5 L0.6055269,561.5 L108.689653,0.5 L435.023476,0.5 L425.448213,97.5 L567.555184,97.5 L557.381625,0.5 L855.438056,0.5 Z" id="Combined-Shape-Copy-6" stroke="#979797" fill="url(#linearGradient-1)"></path>
+                <polygon id="zone_6_3" stroke="#979797" points="108.27679 0 59.5039062 256.961318 241 256.961318 278.78125 0"></polygon>
+                <polygon id="zone_6_1" stroke="#979797" points="241 257.5 196.574219 562 380 562 409.5 257.5"></polygon>
+                <polygon id="zone_6_2" stroke="#979797" points="59.5039062 256.961318 0 562 196.574219 562 241 256.961318"></polygon>
+                <polygon id="zone_6_8" stroke="#979797" points="708.242188 0 745 256.5 583.537109 256.961318 556.826441 0"></polygon>
+                <polygon id="zone_6_7" stroke="#979797" points="908.535156 256.961318 745 256.961318 708.242188 -5.70568743e-14 855.845994 -5.68434189e-14"></polygon>
+                <polygon id="zone_6_5" stroke="#979797" points="583.537109 256.961318 745 256.961318 790.105469 562 614 562"></polygon>
+                <polygon id="zone_6_6" points="745 256.961318 908.535156 256.730659 971 562 790.105469 562"></polygon>
+                <polygon id="zone_6_4" points="278.78125 -7.08433963e-15 435.575263 -7.08433963e-15 409.5 257.25 241 257.5"></polygon>
+                <polygon id="zone_6_9" stroke="#979797" points="426 97 567 97 598.768764 405 396.584219 405"></polygon>
+            </g>
+            <g id="floor_5" transform="translate(0.000000, 1360.000000)" stroke="#979797">
+                <path d="M855.438056,0.5 L970.387162,561.5 L614.45384,561.5 L599.222605,404.5 L396.134253,404.5 L379.550034,561.5 L0.6055269,561.5 L108.689653,0.5 L435.023476,0.5 L425.448213,97.5 L567.555184,97.5 L557.381625,0.5 L855.438056,0.5 Z" id="Combined-Shape-Copy-6" fill="url(#linearGradient-1)"></path>
+                <polygon id="zone_5_3" points="108.27679 0 59.5039062 256.961318 241 256.961318 278.78125 0"></polygon>
+                <polygon id="zone_5_1" points="241 257.5 196.574219 562 380 562 409.5 257.5"></polygon>
+                <polygon id="zone_5_2" points="59.5039062 256.961318 0 562 196.574219 562 241 256.961318"></polygon>
+                <polygon id="zone_5_8" points="708.242188 0 745 256.5 583.537109 256.961318 556.826441 0"></polygon>
+                <polygon id="zone_5_7" points="908.535156 256.961318 745 256.961318 708.242188 -2.13455464e-16 855.845994 -6.31088724e-30"></polygon>
+                <polygon id="zone_5_5" points="583.537109 256.961318 745 256.961318 790.105469 562 614 562"></polygon>
+                <polygon id="zone_5_6" points="745 256.961318 908.535156 256.730659 971 562 790.105469 562"></polygon>
+                <polygon id="zone_5_4" points="278.78125 -7.08433963e-15 435.575263 -7.08433963e-15 409.5 257.25 241 257.5"></polygon>
+                <polygon id="zone_5_9" points="426 97 567 97 598.768764 405 396.584219 405"></polygon>
+            </g>
+            <g id="floor_4" transform="translate(0.000000, 2040.000000)" stroke="#979797">
+                <path d="M855.438056,0.5 L970.387162,561.5 L614.45384,561.5 L599.222605,404.5 L396.134253,404.5 L379.550034,561.5 L0.6055269,561.5 L108.689653,0.5 L435.023476,0.5 L425.448213,97.5 L567.555184,97.5 L557.381625,0.5 L855.438056,0.5 Z" id="Combined-Shape-Copy-6" fill="url(#linearGradient-1)"></path>
+                <polygon id="zone_4_3" points="108.27679 0 59.5039062 256.961318 241 256.961318 278.78125 0"></polygon>
+                <polygon id="zone_4_1" points="241 257.5 196.574219 562 380 562 409.5 257.5"></polygon>
+                <polygon id="zone_4_2" points="59.5039062 256.961318 0 562 196.574219 562 241 256.961318"></polygon>
+                <polygon id="zone_4_8" points="708.242188 0 745 256.5 583.537109 256.961318 556.826441 0"></polygon>
+                <polygon id="zone_4_7" points="908.535156 256.961318 745 256.961318 708.242188 -2.13455464e-16 855.845994 -6.31088724e-30"></polygon>
+                <polygon id="zone_4_5" points="583.537109 256.961318 745 256.961318 790.105469 562 614 562"></polygon>
+                <polygon id="zone_4_6" points="745 256.961318 908.535156 256.730659 971 562 790.105469 562"></polygon>
+                <polygon id="zone_4_4" points="278.78125 -7.08433963e-15 435.575263 -7.08433963e-15 409.5 257.25 241 257.5"></polygon>
+                <polygon id="zone_4_9" points="426 97 567 97 598.768764 405 396.584219 405"></polygon>
+            </g>
+            <g id="floor_3" transform="translate(0.000000, 2720.000000)" stroke="#979797">
+                <path d="M855.438056,0.5 L970.387162,561.5 L614.45384,561.5 L599.222605,404.5 L396.134253,404.5 L379.550034,561.5 L0.6055269,561.5 L108.689653,0.5 L435.023476,0.5 L425.448213,97.5 L567.555184,97.5 L557.381625,0.5 L855.438056,0.5 Z" id="Combined-Shape-Copy-6" fill="url(#linearGradient-1)"></path>
+                <polygon id="zone_3_3" points="108.27679 0 59.5039062 256.961318 241 256.961318 278.78125 0"></polygon>
+                <polygon id="zone_3_1" points="241 257.5 196.574219 562 380 562 409.5 257.5"></polygon>
+                <polygon id="zone_3_2" points="59.5039062 256.961318 0 562 196.574219 562 241 256.961318"></polygon>
+                <polygon id="zone_3_8" points="708.242188 0 745 256.5 583.537109 256.961318 556.826441 0"></polygon>
+                <polygon id="zone_3_7" points="908.535156 256.961318 745 256.961318 708.242188 -2.13455464e-16 855.845994 -6.31088724e-30"></polygon>
+                <polygon id="zone_3_5" points="583.537109 256.961318 745 256.961318 790.105469 562 614 562"></polygon>
+                <polygon id="zone_3_6" points="745 256.961318 908.535156 256.730659 971 562 790.105469 562"></polygon>
+                <polygon id="zone_3_4" points="278.78125 -7.08433963e-15 435.575263 -7.08433963e-15 409.5 257.25 241 257.5"></polygon>
+                <polygon id="zone_3_9" points="426 97 567 97 598.768764 405 396.584219 405"></polygon>
+            </g>
+            <g id="floor_2" transform="translate(0.000000, 3400.000000)" stroke="#979797">
+                <path d="M855.438056,0.5 L970.387162,561.5 L614.45384,561.5 L599.222605,404.5 L396.134253,404.5 L379.550034,561.5 L0.6055269,561.5 L108.689653,0.5 L435.023476,0.5 L425.448213,97.5 L567.555184,97.5 L557.381625,0.5 L855.438056,0.5 Z" id="Combined-Shape-Copy-6" fill="url(#linearGradient-1)"></path>
+                <polygon id="zone_2_3" points="108.27679 0 59.5039062 256.961318 241 256.961318 278.78125 0"></polygon>
+                <polygon id="zone_2_1" points="241 257.5 196.574219 562 380 562 409.5 257.5"></polygon>
+                <polygon id="zone_2" points="59.5039062 256.961318 0 562 196.574219 562 241 256.961318"></polygon>
+                <polygon id="zone_8" points="708.242188 0 745 256.5 583.537109 256.961318 556.826441 0"></polygon>
+                <polygon id="zone_2_7" points="908.535156 256.961318 745 256.961318 708.242188 -2.13455464e-16 855.845994 -6.31088724e-30"></polygon>
+                <polygon id="zone_2_5" points="583.537109 256.961318 745 256.961318 790.105469 562 614 562"></polygon>
+                <polygon id="zone_2_6" points="745 256.961318 908.535156 256.730659 971 562 790.105469 562"></polygon>
+                <polygon id="zone_2_4" points="278.78125 -7.08433963e-15 435.575263 -7.08433963e-15 409.5 257.25 241 257.5"></polygon>
+                <polygon id="zone_2_9" points="426 97 567 97 598.768764 405 396.584219 405"></polygon>
+            </g>
+        </g>
+        <text id="Day" font-family="Helvetica-Light, Helvetica" font-size="100" font-weight="300" fill="#000000">
+            <tspan x="30" y="119">Day</tspan>
+        </text>
+        <text id="Building-6" font-family="Helvetica-Light, Helvetica" font-size="72" font-weight="300" fill="#565656">
+            <tspan x="30" y="291">Building 6</tspan>
+        </text>
+        <text id="dayNumber" font-family="Helvetica-Light, Helvetica" font-size="100" font-weight="300" fill="#000000">
+            <tspan x="248" y="119">—</tspan>
+        </text>
+    </g>
+</svg>

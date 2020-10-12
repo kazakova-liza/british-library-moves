@@ -2,8 +2,10 @@ let dataForTable = [];
 let dates = [];
 let JSONtable;
 let svgObject;
-let svgDoc;
-let svgElement;
+let svgDoc1;
+let svgDoc2;
+let svgElement1;
+let svgElement2;
 let command;
 const buttons = ['start', 'period++', 'phase++', 'jump', 'dump'];
 
@@ -19,13 +21,13 @@ const disableButtons = (buttonName, boolean) => {
 }
 
 const onStartClick = () => {
-    const variables = svgDoc.getElementById('variables');
+    const variables = svgDoc1.getElementById('variables');
     const tspans = [...variables.getElementsByTagName('tspan')];
     for (const tspan of tspans) {
         tspan.textContent = '-';
     }
 
-    if (svgDoc.getElementsByClassName('rectangle').length !== 0) {
+    if (svgDoc1.getElementsByClassName('rectangle').length !== 0) {
         const rectangles = [...svgDoc.getElementsByClassName('rectangle')];
         rectangles.map((rectangle) => rectangle.remove())
     }
@@ -122,9 +124,25 @@ const onPeriodClick = () => {
 
 
 document.getElementById('svg1').addEventListener('load', function () {
-    svgElement = document.getElementById('svg1');
-    svgDoc = svgElement.contentDocument;
-    var panZoom = svgPanZoom(svgElement, {
+    svgElement1 = document.getElementById('svg1');
+    svgDoc1 = svgElement1.contentDocument;
+    var panZoom = svgPanZoom(svgElement1, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        minZoom: 0.1,
+        mouseWheelZoomEnabled: false,
+        // fit: 1,
+        center: false
+    });
+    panZoom.zoom(1);
+    panZoom.fit();
+    panZoom.resize();
+})
+
+document.getElementById('svg2').addEventListener('load', function () {
+    svgElement2 = document.getElementById('svg2');
+    svgDoc2 = svgElement2.contentDocument;
+    var panZoom = svgPanZoom(svgElement2, {
         zoomEnabled: true,
         controlIconsEnabled: true,
         minZoom: 0.1,
@@ -174,19 +192,41 @@ ws.onmessage = function (e) {
         disableButtons(message.payload, false);
     }
 
-    if (message.topic == 'variablesUpdate') {
+    if (message.topic == 'variablesUpdate' && message.payload[0].svg === 2) {
         console.log(message);
         for (element of message.payload) {
-            const el = svgDoc.getElementById(element.id);
+            if (element.value !== undefined) {
+                const el = svgDoc2.getElementById(element.id);
+                console.log(element.id)
+                if (el.getElementsByTagName('tspan') !== undefined) {
+                    const tspans = el.getElementsByTagName('tspan');
+                    tspans[0].textContent = element.value;
+                }
+                else {
+                    svgDoc2.getElementById(element.id).textContent = element.value;
+                }
+            }
+            else {
+                const el = svgDoc2.getElementById(element.id);
+                el.style.fill = element.color;
+            }
+
+        }
+    }
+
+    if (message.topic == 'variablesUpdate' && message.payload[0].svg === 1) {
+        console.log(message);
+        for (element of message.payload) {
+            const el = svgDoc1.getElementById(element.id);
             console.log(element.id)
             if (el.getElementsByTagName('tspan') !== undefined) {
                 const tspans = el.getElementsByTagName('tspan');
                 tspans[0].textContent = element.value;
             }
             else {
-                svgDoc.getElementById(element.id).textContent = element.value;
+                svgDoc1.getElementById(element.id).textContent = element.value;
             }
-            const startingPoint = svgDoc.getElementById('line_1');
+            const startingPoint = svgDoc1.getElementById('line_1');
             const pixelsPerDay = 4.9;
             const pixelsPerMove = 65;
             const x0 = parseInt(startingPoint.attributes["x1"].value);
@@ -197,7 +237,7 @@ ws.onmessage = function (e) {
             const xn = x1 - 5 + pixelsPerDay * element.startDay;
             const yn = y1 + pixelsPerMove * (element.number - 1);
             const width = pixelsPerDay * element.duration;
-            const svgArea = svgDoc.getElementById('Page-1');
+            const svgArea = svgDoc1.getElementById('Page-1');
             if (element.type === 'Move') {
                 color = '#73B7D5';
             }
@@ -254,7 +294,7 @@ ws.onmessage = function (e) {
 
     if (message.topic === 'svgUpdate') {
         console.log(message);
-        const elementToUpdate = svgDoc.getElementById(message.payload.id);
+        const elementToUpdate = svgDoc1.getElementById(message.payload.id);
         console.log(elementToUpdate);
         elementToUpdate.style.fill = message.payload.color;
     }

@@ -1,11 +1,9 @@
 import cache from '../cache.js'
 import objects from '../objects.js';
 
-
-const showMoves = () => {
+const createGanttChart = () => {
     let svgUpdate = [];
     let totalLengthMoved = 0;
-    let endDays = [];
     cache.moves.map((move) => {
         let value;
         let startDay;
@@ -30,8 +28,15 @@ const showMoves = () => {
         else {
             duration = move.length / objects.speeds[move.speed];
         }
+        startDay = Math.round(startDay);
+        const endDay = Math.round(startDay + duration);
+
+        cache.transitionDays.push(startDay);
+        cache.transitionDays.push(endDay);
+
         svgUpdate.push({
             id: `move_${moveNumber}`,
+            svg: 1,
             ref: move.ref,
             type: move.type,
             number: moveNumber,
@@ -40,23 +45,25 @@ const showMoves = () => {
             speed: move.speed,
             condition: move.condition,
             duration: Math.round(duration),
-            startDay: Math.round(startDay),
-            endDay: Math.round(startDay + duration)
+            startDay,
+            endDay
         })
         totalLengthMoved += move.length;
-        endDays.push(startDay + duration);
     })
-    const maxDay = Math.max(...endDays);
+    const maxDay = Math.max(...cache.transitionDays);
     svgUpdate.push({
         id: 'length_moved',
+        svg: 1,
         value: Math.round(totalLengthMoved),
     })
     svgUpdate.push({
         id: 'maximum_day',
+        svg: 1,
         value: Math.round(maxDay),
     })
-    console.log(svgUpdate);
     return svgUpdate;
 }
 
-export default showMoves;
+
+
+export default createGanttChart;
