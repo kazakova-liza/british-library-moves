@@ -1,4 +1,3 @@
-// import groupBy from './utils/groupBy.js';
 import cache from './cache.js';
 import objects from './objects.js'
 
@@ -14,7 +13,9 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
 
     for (let i = cache.currentPeriod; i < cache.currentPeriod + parseInt(numberOfPeriodsToExecute); i++) {
         cache.thisDte = dtes[i].dte;
-        let svgUpdate;
+        let variablesUpdate;
+        let htmlUpdate;
+
         cache.connection.sendUTF(JSON.stringify({
             topic: 'htmlUpdate',
             payload:
@@ -33,12 +34,12 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                     }
                 }));
                 if (el.async !== undefined) {
-                    svgUpdate = await el.function(cache.currentPhase);
+                    variablesUpdate = await el.function();
                 }
                 else {
-                    svgUpdate = el.function();
+                    variablesUpdate = el.function();
                 }
-                const htmlUpdate = [{ id: 'phase', value: el.textOnCompletion }];
+                htmlUpdate = [{ id: 'phase', value: el.textOnCompletion }];
                 cache.connection.sendUTF(JSON.stringify({
                     topic: 'svgUpdate',
                     payload: {
@@ -46,9 +47,10 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                         color: "#bfbfbf"
                     }
                 }));
-                cache.connection.sendUTF(JSON.stringify({ topic: 'svgUpdate', payload: el.svgTransitionElementId }));
-                cache.connection.sendUTF(JSON.stringify({ topic: 'htmlUpdate', payload: htmlUpdate }));
-                cache.connection.sendUTF(JSON.stringify({ topic: 'variablesUpdate', payload: svgUpdate }));
+                cache.connection.sendUTF(JSON.stringify({
+                    topic: 'htmlUpdate',
+                    payload: htmlUpdate
+                }));
             }
         }
         else {
@@ -61,18 +63,18 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                         value: currentPhase.textOnProcessing
                     }]
             }));
-            cache.connection.sendUTF(JSON.stringify({
-                topic: 'svgUpdate',
-                payload: {
-                    id: currentPhase.svgTransitionElementId,
-                    color: "#ff8000"
-                }
-            }));
+            // cache.connection.sendUTF(JSON.stringify({
+            //     topic: 'svgUpdate',
+            //     payload: {
+            //         id: currentPhase.svgTransitionElementId,
+            //         color: "#ff8000"
+            //     }
+            // }));
             if (currentPhase.async !== undefined) {
-                svgUpdate = await currentPhase.function();
+                variablesUpdate = await currentPhase.function(cache.currentPhase - 2);
             }
             else {
-                svgUpdate = currentPhase.function();
+                variablesUpdate = currentPhase.function(cache.currentPhase - 2);
             }
             cache.connection.sendUTF(JSON.stringify({
                 topic: 'htmlUpdate',
@@ -91,9 +93,10 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
             }));
             cache.connection.sendUTF(JSON.stringify({
                 topic: 'variablesUpdate',
-                payload: svgUpdate
+                payload: variablesUpdate
             }));
         }
+
         if (i !== cache.currentPeriod + parseInt(numberOfPeriodsToExecute) - 1) {
             cache.connection.sendUTF(JSON.stringify({ topic: 'setToNought' }));
         }

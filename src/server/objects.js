@@ -1,5 +1,5 @@
 import createGanttChart from './phases/createGanttChart.js'
-import createDay1 from './phases/day1.js'
+import createDay from './phases/createDay.js'
 
 const objects = {
     inputs: [
@@ -22,7 +22,67 @@ const objects = {
         {
             number: 2,
             name: '2',
-            function: createDay1,
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 3,
+            name: '3',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 4,
+            name: '4',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 5,
+            name: '5',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 6,
+            name: '6',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 7,
+            name: '7',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 8,
+            name: '8',
+            function: createDay,
             textOnProcessing: 'processing',
             textOnCompletion: 'finished',
             async: false,

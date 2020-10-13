@@ -39,6 +39,13 @@ const createGanttChart = () => {
             svg: 1,
             ref: move.ref,
             type: move.type,
+            building: move.building,
+            floor: move.floor,
+            toBuilding: move.toBuilding,
+            toFloor: move.toFloor,
+            toZone: move.toZone,
+            fromZone: move.fromZone,
+            collection: move.collection,
             number: moveNumber,
             value,
             length: move.length,
@@ -61,8 +68,24 @@ const createGanttChart = () => {
         svg: 1,
         value: Math.round(maxDay),
     })
+    cache.processedMoves = svgUpdate;
     return svgUpdate;
 }
+
+// cache.transitionDays = cache.transitionDays.filter((day, i) => cache.transitionDays.indexOf(day) === i);
+// cache.transitionDays = cache.transitionDays.sort();
+// let newLocations = {}
+// for (let i = 0; i < cache.transitionDays.length; i++) {
+//     const currentMoves = cache.processedMoves.filter((move) => move.startDay <= cache.transitionDays[i]
+//         && move.endDay >= day);
+//     if (i === 0) {
+//         newLocations[cache.transitionDays[i]] = currentMoves
+//     }
+// }
+// const movesTimeline = cache.transitionDays.reduce((acc, day) => {
+
+//     acc[day] = currentMoves;
+// }, {})
 
 
 
