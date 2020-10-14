@@ -9,14 +9,14 @@ const createGanttChart = () => {
         let startDay;
         let duration;
         const moveNumber = cache.moves.indexOf(move) + 1;
-        if (move.condition === null) {
+        if (move.condition === '') {
             startDay = 1;
         }
         else {
             const dependency = svgUpdate.find((element) => element.ref === move.condition);
             startDay = dependency.endDay + 1;
         }
-        if (move.map2 === null) {
+        if (move.map2 === '') {
             value = `${move.ref} ${move.type} ${move.desc} at ${move.map1}`;
         }
         else {

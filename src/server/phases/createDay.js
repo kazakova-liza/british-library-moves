@@ -4,13 +4,13 @@ import cache from '../cache.js';
 const createDay = async (phase) => {
     cache.transitionDays = cache.transitionDays.filter((day, i) => cache.transitionDays.indexOf(day) === i);
     cache.transitionDays = cache.transitionDays.sort((a, b) => a - b);
-    cache.timeline = {};
     const currentDay = cache.transitionDays[phase];
     let objectsUpdate = [];
-    console.log(phase);
+    console.log(`phase: ${phase}`);
     if (phase !== 0) {
         const previousDay = cache.transitionDays[phase - 1];
-        console.log(previousDay);
+        console.log(`previous day: ${previousDay}`);
+        console.log(cache.timeline);
         cache.timeline[currentDay] = cache.timeline[previousDay];
     }
     else {
@@ -90,15 +90,24 @@ const createDay = async (phase) => {
                     color,
                     borderColor: '#000000',
                     phase: phase + 1,
+                    arrowStartingPoint,
+                    arrowEndPoint
                 }
+                // cache.timeline[currentDay][arrowStartingPoint] = {
+                //     ref: move.ref,
+                //     type: "arrow",
+                //     secondaryType: "start",
+                //     svg: 2,
+                // }
+                // cache.timeline[currentDay][arrowEndPoint] = {
+                //     ref: move.ref,
+                //     type: "arrow",
+                //     secondaryType: "end",
+                //     svg: 2,
+                // }
             })
-            objectsUpdate.push(cache.timeline[currentDay]);
-
-
-            // arrowEndPoint: currentDay === move.endDay ? undefined : arrowEndPoint,
-            //     arrowStartingPoint: currentDay === move.endDay ? undefined : arrowStartingPoint,
-
         })
+    objectsUpdate.push(cache.timeline[currentDay]);
     return objectsUpdate;
 }
 
