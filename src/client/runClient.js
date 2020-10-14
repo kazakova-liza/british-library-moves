@@ -274,22 +274,22 @@ ws.onmessage = function (e) {
         disableButtons(message.payload, false);
     }
 
-    if (message.topic == 'variablesUpdate' && message.payload[0].svg === 2) {
+    if (message.topic == 'movesUpdate') {
         console.log(message);
         const svgArea2 = svgDoc2.getElementById(`Days`);
-        dayNumber = message.payload[1].phase;
-        if (dayNumber >= 2) {
-            const newElement = svgDoc2.createElement('g');
-            const newDayWithDayNumber = newDay.replace("__DAY_NUMBER__", dayNumber);
-            const newDayWithXIncrement = newDayWithDayNumber.replace("__X_INCREMENT__", dayNumber * 3000)
-            newElement.innerHTML = newDayWithXIncrement;
-            svgArea2.appendChild(newElement);
-        }
-        const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
+        dayNumber = message.payload[0].phase;
         for (item of message.payload) {
+            if (dayNumber >= 2) {
+                const newElement = svgDoc2.createElement('g');
+                const newDayWithDayNumber = newDay.replace("__DAY_NUMBER__", dayNumber);
+                const newDayWithXIncrement = newDayWithDayNumber.replace("__X_INCREMENT__", dayNumber * 3000)
+                newElement.innerHTML = newDayWithXIncrement;
+                svgArea2.appendChild(newElement);
+            }
+            const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
+
             if (item.type === 'variable') {
                 const svgObject = currentDay.querySelector(`#${item.id}`);
-                console.log(item.id)
                 if (svgObject.getElementsByTagName('tspan') !== undefined) {
                     const tspans = svgObject.getElementsByTagName('tspan');
                     tspans[0].textContent = item.value;
@@ -298,63 +298,65 @@ ws.onmessage = function (e) {
                     svgDoc2.getElementById(item.id).textContent = item.value;
                 }
             }
-            else {
-                for (const zone of item.fromObjects) {
-                    const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
-                    const svgObject = currentDay.querySelector(`#${zone}`);
+            else if (item.type === undefined) {
+                const keys = Object.keys(item);
+                keys.map((key) => {
+                    const svgObject = currentDay.querySelector(`#${key}`);
                     if (svgObject.style == undefined) {
                         svgObject.style = {};
                     }
-                    svgObject.style.fill = item.color;
-                    svgObject.style.stroke = item.borderColor;
-                }
-                if (item.status === 'finished') {
-                    for (const zone of item.toObjects) {
-                        if (zone !== 'zone_b31' && zone !== 'offSite') {
-                            const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
-                            const svgObject = currentDay.querySelector(`#${zone}`);
-                            if (svgObject.style == undefined) {
-                                svgObject.style = {};
-                            }
-                            svgObject.style.fill = item.color;
-                            svgObject.style.stroke = item.borderColor;
-                        }
+                    svgObject.style.fill = item[key].color;
+                    svgObject.style.stroke = item[key].borderColor;
+                })
 
-
-                    }
-                }
-                let x1;
-                let y1;
-                let x2;
-                let y2;
-                const startingPoint = svgDoc2.getElementById(item.arrowStartingPoint);
-                console.log(startingPoint);
-                if (startingPoint.points !== undefined) {
-                    const startingPointCoordinates = [...startingPoint.points];
-                    x1 = startingPointCoordinates[0].x;
-                    y1 = startingPointCoordinates[0].y;
-                }
-                else {
-                    x1 = startingPoint.x.baseVal.value;
-                    y1 = startingPoint.y.baseVal.value;
-                }
-
-                const endPoint = svgDoc2.getElementById(item.arrowEndPoint);
-                if (endPoint.points !== undefined) {
-                    const endPointCoordinates = [...endPoint.points];
-                    x2 = endPointCoordinates[0].x;
-                    y2 = endPointCoordinates[0].y;
-                }
-                else {
-                    x2 = endPoint.x.baseVal.value;
-                    y2 = endPoint.y.baseVal.value;
-                }
-
-
-                svgArea2.innerHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-dasharray="5,17"></line>
-                                                            <circle stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="${x1}" cy="${y1}" r="10.5"></circle>
-                <path d="M1303,1522 C1321.2254,1522 1336,1536.78434 1336,1555.02174 C1336,1567.18001 1325,1587.17276 1303,1615 C1281,1587.17276 1270,1567.18001 1270,1555.02174 C1270,1536.78434 1284.7746,1522 1303,1522 Z M1303.5,1541 C1295.49187,1541 1289,1547.49187 1289,1555.5 C1289,1563.50813 1295.49187,1570 1303.5,1570 C1311.50813,1570 1318,1563.50813 1318,1555.5 C1318,1547.49187 1311.50813,1541 1303.5,1541 Z" fill="#D64E4E" transform = "translate(${x2 - 1300},${y2 - 1600})"></path>`
             }
+            //     if (item.status === 'finished') {
+            //         for (const zone of item.toObjects) {
+            //             if (zone !== 'zone_b31' && zone !== 'offSite') {
+            //                 const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
+            //                 const svgObject = currentDay.querySelector(`#${zone}`);
+            //                 if (svgObject.style == undefined) {
+            //                     svgObject.style = {};
+            //                 }
+            //                 svgObject.style.fill = item.color;
+            //                 svgObject.style.stroke = item.borderColor;
+            //             }
+
+
+            //         }
+            //     }
+            //     let x1;
+            //     let y1;
+            //     let x2;
+            //     let y2;
+            //     const startingPoint = svgDoc2.getElementById(item.arrowStartingPoint);
+            //     console.log(startingPoint);
+            //     if (startingPoint.points !== undefined) {
+            //         const startingPointCoordinates = [...startingPoint.points];
+            //         x1 = startingPointCoordinates[0].x;
+            //         y1 = startingPointCoordinates[0].y;
+            //     }
+            //     else {
+            //         x1 = startingPoint.x.baseVal.value;
+            //         y1 = startingPoint.y.baseVal.value;
+            //     }
+
+            //     const endPoint = svgDoc2.getElementById(item.arrowEndPoint);
+            //     if (endPoint.points !== undefined) {
+            //         const endPointCoordinates = [...endPoint.points];
+            //         x2 = endPointCoordinates[0].x;
+            //         y2 = endPointCoordinates[0].y;
+            //     }
+            //     else {
+            //         x2 = endPoint.x.baseVal.value;
+            //         y2 = endPoint.y.baseVal.value;
+            //     }
+
+
+            //     svgArea2.innerHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-dasharray="5,17"></line>
+            //                                                     <circle stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="${x1}" cy="${y1}" r="10.5"></circle>
+            //         <path d="M1303,1522 C1321.2254,1522 1336,1536.78434 1336,1555.02174 C1336,1567.18001 1325,1587.17276 1303,1615 C1281,1587.17276 1270,1567.18001 1270,1555.02174 C1270,1536.78434 1284.7746,1522 1303,1522 Z M1303.5,1541 C1295.49187,1541 1289,1547.49187 1289,1555.5 C1289,1563.50813 1295.49187,1570 1303.5,1570 C1311.50813,1570 1318,1563.50813 1318,1555.5 C1318,1547.49187 1311.50813,1541 1303.5,1541 Z" fill="#D64E4E" transform = "translate(${x2 - 1300},${y2 - 1600})"></path>`
+            // }
 
         }
     }

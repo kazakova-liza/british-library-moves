@@ -92,7 +92,7 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
                 }
             }));
             cache.connection.sendUTF(JSON.stringify({
-                topic: 'variablesUpdate',
+                topic: cache.currentPhase === 1 ? 'variablesUpdate' : 'movesUpdate',
                 payload: variablesUpdate
             }));
         }

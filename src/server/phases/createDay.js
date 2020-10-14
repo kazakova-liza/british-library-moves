@@ -5,21 +5,16 @@ const createDay = async (phase) => {
     cache.transitionDays = cache.transitionDays.filter((day, i) => cache.transitionDays.indexOf(day) === i);
     cache.transitionDays = cache.transitionDays.sort((a, b) => a - b);
     cache.timeline = {};
-    //     cache.transitionDays.map((day) => {
-    //         cache.processedMoves.map((move) => {
-    //             if (move.startDay <= day && move.endDay > day) {
-    //                 cache.timeline[move.ref].status = 'active';
-    //             }
-    //             if (move.endDay <= day) {
-    //                 cache.timeline[move.ref].status = 'finished';
-    //             }
-    //         }
-    // })
     const currentDay = cache.transitionDays[phase];
     let objectsUpdate = [];
+    console.log(phase);
     if (phase !== 0) {
         const previousDay = cache.transitionDays[phase - 1];
+        console.log(previousDay);
         cache.timeline[currentDay] = cache.timeline[previousDay];
+    }
+    else {
+        cache.timeline[currentDay] = {};
     }
 
     objectsUpdate.push({
@@ -27,6 +22,7 @@ const createDay = async (phase) => {
         type: "variable",
         svg: 2,
         value: currentDay,
+        phase: phase + 1,
     })
 
     const colors = await getter('collections');
@@ -39,7 +35,6 @@ const createDay = async (phase) => {
             let toObjects = [];
             let arrowStartingPoint = '';
             let arrowEndPoint = '';
-
 
 
             if (fromZones.length <= 4) {
@@ -71,20 +66,37 @@ const createDay = async (phase) => {
             const collectionColor = colors.find((col) => col.collection === move.collection).collectionColor;
             const fromObjects = fromZones.map((zone) => `zone_${floor}_${zone}`);
 
-            const data = {
-                ref: move.ref,
-                type: "move",
-                svg: 2,
-                color: currentDay === move.endDay ? '#ffffff' : collectionColor,
-                borderColor: '#000000',
-                fromObjects,
-                toObjects,
-                status: currentDay === move.endDay ? 'finished' : 'active',
-                arrowEndPoint: currentDay === move.endDay ? undefined : arrowEndPoint,
-                arrowStartingPoint: currentDay === move.endDay ? undefined : arrowStartingPoint,
-                phase: phase + 1,
-            };
-            objectsUpdate.push(data);
+            fromObjects.map((fromObject) => {
+                let color;
+                if (currentDay === move.endDay) {
+                    color = '#ffffff';
+                    toObjects.map((toObject) => {
+                        cache.timeline[currentDay][toObject] = {
+                            ref: move.ref,
+                            type: "move",
+                            svg: 2,
+                            color: collectionColor,
+                            phase: phase + 1,
+                        }
+                    })
+                }
+                else {
+                    color = collectionColor
+                }
+                cache.timeline[currentDay][fromObject] = {
+                    ref: move.ref,
+                    type: "move",
+                    svg: 2,
+                    color,
+                    borderColor: '#000000',
+                    phase: phase + 1,
+                }
+            })
+            objectsUpdate.push(cache.timeline[currentDay]);
+
+
+            // arrowEndPoint: currentDay === move.endDay ? undefined : arrowEndPoint,
+            //     arrowStartingPoint: currentDay === move.endDay ? undefined : arrowStartingPoint,
 
         })
     return objectsUpdate;
