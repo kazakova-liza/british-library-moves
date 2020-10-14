@@ -1,6 +1,7 @@
 const cache = {
     variables: undefined,
-    transitionDays: []
+    transitionDays: [],
+    timeline: {}
 };
 
 export default cache;

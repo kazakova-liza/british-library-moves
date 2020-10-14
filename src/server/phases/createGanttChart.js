@@ -14,7 +14,7 @@ const createGanttChart = () => {
         }
         else {
             const dependency = svgUpdate.find((element) => element.ref === move.condition);
-            startDay = dependency.endDay;
+            startDay = dependency.endDay + 1;
         }
         if (move.map2 === null) {
             value = `${move.ref} ${move.type} ${move.desc} at ${move.map1}`;
@@ -29,7 +29,7 @@ const createGanttChart = () => {
             duration = move.length / objects.speeds[move.speed];
         }
         startDay = Math.round(startDay);
-        const endDay = Math.round(startDay + duration);
+        const endDay = Math.round(startDay + duration - 1);
 
         cache.transitionDays.push(startDay);
         cache.transitionDays.push(endDay);
@@ -69,24 +69,8 @@ const createGanttChart = () => {
         value: Math.round(maxDay),
     })
     cache.processedMoves = svgUpdate;
+    console.log(cache.processedMoves);
     return svgUpdate;
 }
-
-// cache.transitionDays = cache.transitionDays.filter((day, i) => cache.transitionDays.indexOf(day) === i);
-// cache.transitionDays = cache.transitionDays.sort();
-// let newLocations = {}
-// for (let i = 0; i < cache.transitionDays.length; i++) {
-//     const currentMoves = cache.processedMoves.filter((move) => move.startDay <= cache.transitionDays[i]
-//         && move.endDay >= day);
-//     if (i === 0) {
-//         newLocations[cache.transitionDays[i]] = currentMoves
-//     }
-// }
-// const movesTimeline = cache.transitionDays.reduce((acc, day) => {
-
-//     acc[day] = currentMoves;
-// }, {})
-
-
 
 export default createGanttChart;

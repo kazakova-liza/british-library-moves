@@ -185,7 +185,7 @@ ws.onmessage = function (e) {
         inputs.innerHTML = html;
     }
 
-    const newDay = `<g id="day__DAY_NUMBER__" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform = "translate(3000, 0)">
+    const newDay = `<g id="day__DAY_NUMBER__" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform = "translate(__X_INCREMENT__, 0)">
     <path d="M1087.38162,521.5 L1385.43806,521.5 L1500.38716,1082.5 L1144.45384,1082.5 L1129.2226,925.5 L926.134253,925.5 L909.550034,1082.5 L530.605527,1082.5 L638.689653,521.5 L965.023476,521.5 L955.448213,618.5 L1097.55518,618.5 L1087.38162,521.5 Z" id="Combined-Shape-Copy-6" stroke="#979797" fill="url(#linearGradient-1)"></path>
     <polygon id="zone_7_1" stroke="#979797" fill="#D8D8D8" points="956 618 1097 618 1128.76876 926 926.584219 926"></polygon>
     <polygon id="zone_7_2" stroke="#979797" points="771 778.5 726.574219 1083 910 1083 939.5 778.5"></polygon>
@@ -280,7 +280,9 @@ ws.onmessage = function (e) {
         dayNumber = message.payload[1].phase;
         if (dayNumber >= 2) {
             const newElement = svgDoc2.createElement('g');
-            newElement.innerHTML = newDay.replace("__DAY_NUMBER__", dayNumber);
+            const newDayWithDayNumber = newDay.replace("__DAY_NUMBER__", dayNumber);
+            const newDayWithXIncrement = newDayWithDayNumber.replace("__X_INCREMENT__", dayNumber * 3000)
+            newElement.innerHTML = newDayWithXIncrement;
             svgArea2.appendChild(newElement);
         }
         const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
@@ -305,6 +307,21 @@ ws.onmessage = function (e) {
                     }
                     svgObject.style.fill = item.color;
                     svgObject.style.stroke = item.borderColor;
+                }
+                if (item.status === 'finished') {
+                    for (const zone of item.toObjects) {
+                        if (zone !== 'zone_b31' && zone !== 'offSite') {
+                            const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
+                            const svgObject = currentDay.querySelector(`#${zone}`);
+                            if (svgObject.style == undefined) {
+                                svgObject.style = {};
+                            }
+                            svgObject.style.fill = item.color;
+                            svgObject.style.stroke = item.borderColor;
+                        }
+
+
+                    }
                 }
                 let x1;
                 let y1;
