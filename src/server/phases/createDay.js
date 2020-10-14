@@ -2,8 +2,11 @@ import getter from '../airtable/getter.js';
 import cache from '../cache.js';
 
 const createDay = async (phase) => {
-    cache.transitionDays = cache.transitionDays.filter((day, i) => cache.transitionDays.indexOf(day) === i);
-    cache.transitionDays = cache.transitionDays.sort();
+    cache.transitionDays = cache.transitionDays.filter((day, i) => cache.transitionDays.indexOf(day) === i)
+        .map((day) => parseInt(day))
+    cache.transitionDays = cache.transitionDays.sort((a, b) => a - b);
+    console.log(cache.transitionDays);
+    console.log(typeof cache.transitionDays[0]);
     const currentDay = cache.transitionDays[phase];
     console.log(currentDay);
     let objectsUpdate = [];
@@ -62,7 +65,7 @@ const createDay = async (phase) => {
                 toObjects,
                 arrowEndPoint,
                 arrowStartingPoint,
-                phase: 1,
+                phase: phase + 1,
             })
         })
     return objectsUpdate;

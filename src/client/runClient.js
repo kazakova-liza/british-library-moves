@@ -122,6 +122,7 @@ const onPeriodClick = () => {
     ws.send(JSON.stringify(command));
 };
 
+let dayNumber;
 
 document.getElementById('svg1').addEventListener('load', function () {
     svgElement1 = document.getElementById('svg1');
@@ -169,7 +170,22 @@ ws.onopen = function () {
     ws.send(JSON.stringify(command));
 };
 
-const newDay = `<g id="Day-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+
+ws.onmessage = function (e) {
+    message = JSON.parse(e.data);
+    console.log(message);
+    if (message.topic === 'inputs') {
+        let html = '';
+        for (const input of message.payload) {
+            html += `<label for="${input.name}"> ${input.name}: </label>
+                <textarea id="${input.name}" name="${input.name}" rows="1" cols="20"> </textarea>
+                <br>`;
+        }
+        inputs = document.getElementById('inputs');
+        inputs.innerHTML = html;
+    }
+
+    const newDay = `<g id="day__DAY_NUMBER__" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform = "translate(3000, 0)">
     <path d="M1087.38162,521.5 L1385.43806,521.5 L1500.38716,1082.5 L1144.45384,1082.5 L1129.2226,925.5 L926.134253,925.5 L909.550034,1082.5 L530.605527,1082.5 L638.689653,521.5 L965.023476,521.5 L955.448213,618.5 L1097.55518,618.5 L1087.38162,521.5 Z" id="Combined-Shape-Copy-6" stroke="#979797" fill="url(#linearGradient-1)"></path>
     <polygon id="zone_7_1" stroke="#979797" fill="#D8D8D8" points="956 618 1097 618 1128.76876 926 926.584219 926"></polygon>
     <polygon id="zone_7_2" stroke="#979797" points="771 778.5 726.574219 1083 910 1083 939.5 778.5"></polygon>
@@ -250,20 +266,6 @@ const newDay = `<g id="Day-1" stroke="none" stroke-width="1" fill="none" fill-ru
 </g>`;
 
 
-ws.onmessage = function (e) {
-    message = JSON.parse(e.data);
-    console.log(message);
-    if (message.topic === 'inputs') {
-        let html = '';
-        for (const input of message.payload) {
-            html += `<label for="${input.name}"> ${input.name}: </label>
-                <textarea id="${input.name}" name="${input.name}" rows="1" cols="20"> </textarea>
-                <br>`;
-        }
-        inputs = document.getElementById('inputs');
-        inputs.innerHTML = html;
-    }
-
     if (message.topic == 'disableButtons') {
         disableButtons(message.payload, true);
     }
@@ -274,13 +276,17 @@ ws.onmessage = function (e) {
 
     if (message.topic == 'variablesUpdate' && message.payload[0].svg === 2) {
         console.log(message);
-        // if (message.payload[0].phase !== 2) {
-        //     svgDoc2.innerHTML = svgDoc2.innerHTML + newDay;
-        // }
-        const svgArea2 = svgDoc2.getElementById(`Day-${message.payload[1].phase}`);
+        const svgArea2 = svgDoc2.getElementById(`Days`);
+        dayNumber = message.payload[1].phase;
+        if (dayNumber >= 2) {
+            const newElement = svgDoc2.createElement('g');
+            newElement.innerHTML = newDay.replace("__DAY_NUMBER__", dayNumber);
+            svgArea2.appendChild(newElement);
+        }
+        const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
         for (item of message.payload) {
             if (item.type === 'variable') {
-                const svgObject = svgDoc2.getElementById(item.id);
+                const svgObject = currentDay.querySelector(`#${item.id}`);
                 console.log(item.id)
                 if (svgObject.getElementsByTagName('tspan') !== undefined) {
                     const tspans = svgObject.getElementsByTagName('tspan');
@@ -292,7 +298,11 @@ ws.onmessage = function (e) {
             }
             else {
                 for (const zone of item.fromObjects) {
-                    const svgObject = svgDoc2.getElementById(zone);
+                    const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
+                    const svgObject = currentDay.querySelector(`#${zone}`);
+                    if (svgObject.style == undefined) {
+                        svgObject.style = {};
+                    }
                     svgObject.style.fill = item.color;
                     svgObject.style.stroke = item.borderColor;
                 }
@@ -324,7 +334,7 @@ ws.onmessage = function (e) {
                 }
 
 
-                svgArea2.innerHTML = svgArea2.innerHTML + `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-dasharray="5,17"></line>
+                svgArea2.innerHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-dasharray="5,17"></line>
                                                             <circle stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="${x1}" cy="${y1}" r="10.5"></circle>
                 <path d="M1303,1522 C1321.2254,1522 1336,1536.78434 1336,1555.02174 C1336,1567.18001 1325,1587.17276 1303,1615 C1281,1587.17276 1270,1567.18001 1270,1555.02174 C1270,1536.78434 1284.7746,1522 1303,1522 Z M1303.5,1541 C1295.49187,1541 1289,1547.49187 1289,1555.5 C1289,1563.50813 1295.49187,1570 1303.5,1570 C1311.50813,1570 1318,1563.50813 1318,1555.5 C1318,1547.49187 1311.50813,1541 1303.5,1541 Z" fill="#D64E4E" transform = "translate(${x2 - 1300},${y2 - 1600})"></path>`
             }
@@ -416,4 +426,3 @@ ws.onmessage = function (e) {
         elementToUpdate.style.fill = message.payload.color;
     }
 };
-
