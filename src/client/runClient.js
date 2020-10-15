@@ -385,52 +385,58 @@ ws.onmessage = function (e) {
                         svgObject.style = {};
                     }
                     if (item[key].type !== 'ConstructionWholeFloor') {
-                        svgObject.style.fill = item[key].color;
+                        if (item[key].color === '') {
+                            svgObject.style.fill = 'none';
+                        }
+                        else {
+                            svgObject.style.fill = item[key].color;
+                        }
+
                     }
 
                     svgObject.style.stroke = item[key].borderColor;
                     if (item[key].type === 'construction') {
                         svgObject.style.fillOpacity = "0.6";
                     }
-                    // if (item[key].type === 'ConstructionWholeFloor') {
-                    //     const floor = item[key].floor;
-                    //     const floorObject = currentDay.querySelector(`#floor_${floor}`);
-                    //     floorObject.style.fillOpacity = "0.6";
-                    //     floorObject.style.fill = item[key].color;
-                    // }
+                    if (item[key].type === 'ConstructionWholeFloor') {
+                        const floor = item[key].floor;
+                        const floorObject = currentDay.querySelector(`#floor_${floor}`);
+                        floorObject.style.fillOpacity = "0.6";
+                        floorObject.style.fill = item[key].color;
+                    }
 
-                    // if (item[key].arrowStartingPoint !== undefined) {
-                    //     let x1;
-                    //     let y1;
-                    //     let x2;
-                    //     let y2;
-                    //     console.log(key);
-                    //     const startingPoint = svgDoc2.getElementById(item[key].arrowStartingPoint);
-                    //     console.log(startingPoint);
-                    //     if (startingPoint.points !== undefined) {
-                    //         const startingPointCoordinates = [...startingPoint.points];
-                    //         x1 = startingPointCoordinates[0].x;
-                    //         y1 = startingPointCoordinates[0].y;
-                    //     }
-                    //     else {
-                    //         x1 = startingPoint.x.baseVal.value;
-                    //         y1 = startingPoint.y.baseVal.value;
-                    //     }
-                    //     const endPoint = svgDoc2.getElementById(item[key].arrowEndPoint);
-                    //     console.log(endPoint);
-                    //     if (endPoint.points !== undefined) {
-                    //         const endPointCoordinates = [...endPoint.points];
-                    //         x2 = endPointCoordinates[0].x;
-                    //         y2 = endPointCoordinates[0].y;
-                    //     }
-                    //     else {
-                    //         x2 = endPoint.x.baseVal.value;
-                    //         y2 = endPoint.y.baseVal.value;
-                    //     }
-                    //     currentDay.innerHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-dasharray="5,17"></line>
-                    //                                                 <circle stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="${x1}" cy="${y1}" r="10.5"></circle>
-                    //     <path d="M1303,1522 C1321.2254,1522 1336,1536.78434 1336,1555.02174 C1336,1567.18001 1325,1587.17276 1303,1615 C1281,1587.17276 1270,1567.18001 1270,1555.02174 C1270,1536.78434 1284.7746,1522 1303,1522 Z M1303.5,1541 C1295.49187,1541 1289,1547.49187 1289,1555.5 C1289,1563.50813 1295.49187,1570 1303.5,1570 C1311.50813,1570 1318,1563.50813 1318,1555.5 C1318,1547.49187 1311.50813,1541 1303.5,1541 Z" fill="#D64E4E" transform = "translate(${x2 - 1300},${y2 - 1600})"></path>`
-                    // }
+                    if (item[key].arrowStartingPoint !== undefined) {
+                        let x1;
+                        let y1;
+                        let x2;
+                        let y2;
+                        console.log(key);
+                        const startingPoint = svgDoc2.getElementById(item[key].arrowStartingPoint);
+                        console.log(startingPoint);
+                        if (startingPoint.points !== undefined) {
+                            const startingPointCoordinates = [...startingPoint.points];
+                            x1 = startingPointCoordinates[0].x;
+                            y1 = startingPointCoordinates[0].y;
+                        }
+                        else {
+                            x1 = startingPoint.x.baseVal.value;
+                            y1 = startingPoint.y.baseVal.value;
+                        }
+                        const endPoint = svgDoc2.getElementById(item[key].arrowEndPoint);
+                        console.log(endPoint);
+                        if (endPoint.points !== undefined) {
+                            const endPointCoordinates = [...endPoint.points];
+                            x2 = endPointCoordinates[0].x;
+                            y2 = endPointCoordinates[0].y;
+                        }
+                        else {
+                            x2 = endPoint.x.baseVal.value;
+                            y2 = endPoint.y.baseVal.value;
+                        }
+                        currentDay.innerHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-dasharray="5,17"></line>
+                                                                    <circle stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="${x1}" cy="${y1}" r="10.5"></circle>
+                        <path d="M1303,1522 C1321.2254,1522 1336,1536.78434 1336,1555.02174 C1336,1567.18001 1325,1587.17276 1303,1615 C1281,1587.17276 1270,1567.18001 1270,1555.02174 C1270,1536.78434 1284.7746,1522 1303,1522 Z M1303.5,1541 C1295.49187,1541 1289,1547.49187 1289,1555.5 C1289,1563.50813 1295.49187,1570 1303.5,1570 C1311.50813,1570 1318,1563.50813 1318,1555.5 C1318,1547.49187 1311.50813,1541 1303.5,1541 Z" fill="#D64E4E" transform = "translate(${x2 - 1300},${y2 - 1600})"></path>`
+                    }
                 })
 
             }

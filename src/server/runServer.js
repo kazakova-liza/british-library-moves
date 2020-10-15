@@ -69,7 +69,7 @@ const runServer = async () => {
                 if (command.payload !== undefined) {
                     cache.table = command.payload.mySqlTable;
                     cache.moves = await executeQuery('getData', cache.table);
-                    console.log(cache.moves);
+                    // console.log(cache.moves);
                 }
                 await execute(numberOfPeriodsToExecute);
             }
