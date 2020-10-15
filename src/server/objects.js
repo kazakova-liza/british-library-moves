@@ -88,7 +88,98 @@ const objects = {
             async: false,
             svgTransitionElementId: undefined,
             svgShowOnTransitionId: undefined
-        }
+        },
+        {
+            number: 9,
+            name: '9',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 10,
+            name: '10',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 11,
+            name: '11',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 12,
+            name: '12',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 13,
+            name: '13',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 14,
+            name: '14',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 15,
+            name: '15',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 16,
+            name: '16',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 17,
+            name: '17',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+
     ],
     speeds: {
         A: 0.2,

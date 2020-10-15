@@ -36,8 +36,13 @@ const createDay = async (phase) => {
             let arrowStartingPoint = '';
             let arrowEndPoint = '';
 
-
+            if (fromZones.length === 1) {
+                arrowStartingPoint = `zone_${floor}_${fromZones[0]}`;
+            }
             if (fromZones.length <= 4) {
+                arrowStartingPoint = `zone_${floor}_${fromZones[1]}`;
+            }
+            if (fromZones.length <= 4 && fromZones.length > 1) {
                 arrowStartingPoint = `zone_${floor}_${fromZones[1]}`;
             }
             if (fromZones.length === 9) {
@@ -63,48 +68,56 @@ const createDay = async (phase) => {
                     toObjects = toZones.map((zone) => `zone_${floor}_${zone}`);
                 }
             }
-            const collectionColor = colors.find((col) => col.collection === move.collection).collectionColor;
+            let collectionColor = colors.find((col) => col.collection === move.collection);
+            if (collectionColor !== undefined) {
+                collectionColor = collectionColor.collectionColor;
+            }
+
             const fromObjects = fromZones.map((zone) => `zone_${floor}_${zone}`);
 
             fromObjects.map((fromObject) => {
                 let color;
+                let type;
+                if (move.type === 'Move') {
+                    type = 'move';
+                    color = collectionColor;
+                }
+                if (move.type === 'Construction') {
+                    color = 'url(#pattern-2)';
+                    // if (fromZones.length === 9) {
+                    //     type = 'ConstructionWholeFloor';
+                    // }
+                    // else {
+                    type = 'construction';
+                    // }
+                }
                 if (currentDay === move.endDay) {
                     color = '#ffffff';
                     toObjects.map((toObject) => {
                         cache.timeline[currentDay][toObject] = {
                             ref: move.ref,
-                            type: "move",
+                            type,
                             svg: 2,
-                            color: collectionColor,
+                            color: (toObject === 'zone_b31' || toObject === 'offSite') ? '' : collectionColor,
                             phase: phase + 1,
+                            arrowStartingPoint: undefined,
+                            arrowEndPoint: undefined,
+                            floor: move.floor,
+
                         }
                     })
                 }
-                else {
-                    color = collectionColor
-                }
                 cache.timeline[currentDay][fromObject] = {
                     ref: move.ref,
-                    type: "move",
+                    type,
                     svg: 2,
                     color,
                     borderColor: '#000000',
                     phase: phase + 1,
                     arrowStartingPoint,
-                    arrowEndPoint
+                    arrowEndPoint,
+                    floor: move.floor,
                 }
-                // cache.timeline[currentDay][arrowStartingPoint] = {
-                //     ref: move.ref,
-                //     type: "arrow",
-                //     secondaryType: "start",
-                //     svg: 2,
-                // }
-                // cache.timeline[currentDay][arrowEndPoint] = {
-                //     ref: move.ref,
-                //     type: "arrow",
-                //     secondaryType: "end",
-                //     svg: 2,
-                // }
             })
         })
     objectsUpdate.push(cache.timeline[currentDay]);

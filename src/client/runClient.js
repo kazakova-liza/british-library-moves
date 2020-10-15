@@ -185,6 +185,85 @@ ws.onmessage = function (e) {
         inputs.innerHTML = html;
     }
 
+    const newDay1 = `<g id="day__DAY_NUMBER__" transform="translate(__X_INCREMENT__, 0)">
+        <path d="M1355.43806,499.5 L1470.38716,1060.5 L1114.45384,1060.5 L1099.2226,903.5 L896.134253,903.5 L879.550034,1060.5 L500.605527,1060.5 L608.689653,499.5 L935.023476,499.5 L925.448213,596.5 L1067.55518,596.5 L1057.38162,499.5 L1355.43806,499.5 Z" id="floor_7" stroke="#979797" fill="url(#linearGradient-1)"></path>
+        <polygon id="zone_7_1" stroke="#979797" fill="#D8D8D8" points="926 596 1067 596 1098.76876 904 896.584219 904"></polygon>
+        <polygon id="zone_7_2" stroke="#979797" points="741 756.5 696.574219 1061 880 1061 909.5 756.5"></polygon>
+        <polygon id="zone_7_3" stroke="#979797" points="559.503906 755.961318 500 1061 696.574219 1061 741 755.961318"></polygon>
+        <polygon id="zone_7_6" stroke="#979797" points="1208.24219 499 1245 755.5 1083.53711 755.961318 1056.82644 499"></polygon>
+        <polygon id="zone_7_7" stroke="#979797" points="1408.53516 755.961318 1245 755.961318 1208.24219 499 1355.84599 499"></polygon>
+        <polygon id="zone_7_9" points="1083.53711 755.961318 1245 755.961318 1290.10547 1061 1114 1061"></polygon>
+        <polygon id="zone_7_8" stroke="#979797" points="1245 755.961318 1408.53516 755.730659 1471 1061 1290.10547 1061"></polygon>
+        <polygon id="zone_7_4" stroke="#979797" points="608.772883 499 560 755.961318 741.496094 755.961318 779.277344 499"></polygon>
+        <polygon id="zone_7_5" stroke="#979797" points="778.78125 499 935.575263 499 909.5 756.25 741 756.5"></polygon>
+        <path d="M1057.38162,1179.5 L1355.43806,1179.5 L1470.38716,1740.5 L1114.45384,1740.5 L1099.2226,1583.5 L896.134253,1583.5 L879.550034,1740.5 L500.605527,1740.5 L608.689653,1179.5 L935.023476,1179.5 L925.448213,1276.5 L1067.55518,1276.5 L1057.38162,1179.5 Z" id="floor_6" stroke="#979797" fill="url(#linearGradient-1)"></path>
+        <polygon id="zone_6_4" stroke="#979797" points="608.27679 1179 559.503906 1435.96132 741 1435.96132 778.78125 1179"></polygon>
+        <polygon id="zone_6_2" stroke="#979797" points="741 1436.5 696.574219 1741 880 1741 909.5 1436.5"></polygon>
+        <polygon id="zone_6_3" stroke="#979797" points="559.503906 1435.96132 500 1741 696.574219 1741 741 1435.96132"></polygon>
+        <polygon id="zone_6_6" stroke="#979797" points="1208.24219 1179 1245 1435.5 1083.53711 1435.96132 1056.82644 1179"></polygon>
+        <polygon id="zone_6_7" stroke="#979797" points="1408.53516 1435.96132 1245 1435.96132 1208.24219 1179 1355.84599 1179"></polygon>
+        <polygon id="zone_6_9" stroke="#979797" points="1083.53711 1435.96132 1245 1435.96132 1290.10547 1741 1114 1741"></polygon>
+        <polygon id="zone_6_8" points="1245 1435.96132 1408.53516 1435.73066 1471 1741 1290.10547 1741"></polygon>
+        <polygon id="zone_6_5" points="778.78125 1179 935.575263 1179 909.5 1436.25 741 1436.5"></polygon>
+        <polygon id="zone_6_1" stroke="#979797" points="926 1276 1067 1276 1098.76876 1584 896.584219 1584"></polygon>
+        <path d="M935.023476,1859.5 L925.448213,1956.5 L1067.55518,1956.5 L1057.38162,1859.5 L1355.43806,1859.5 L1470.38716,2420.5 L1114.45384,2420.5 L1099.2226,2263.5 L896.134253,2263.5 L879.550034,2420.5 L500.605527,2420.5 L608.689653,1859.5 L935.023476,1859.5 Z" id="floor_5" stroke="#979797" fill="url(#linearGradient-1)"></path>
+        <polygon id="zone_5_4" stroke="#979797" points="608.27679 1859 559.503906 2115.96132 741 2115.96132 778.78125 1859"></polygon>
+        <polygon id="zone_5_2" stroke="#979797" points="741 2116.5 696.574219 2421 880 2421 909.5 2116.5"></polygon>
+        <polygon id="zone_5_3" stroke="#979797" points="559.503906 2115.96132 500 2421 696.574219 2421 741 2115.96132"></polygon>
+        <polygon id="zone_5_6" stroke="#979797" points="1208.24219 1859 1245 2115.5 1083.53711 2115.96132 1056.82644 1859"></polygon>
+        <polygon id="zone_5_7" stroke="#979797" points="1408.53516 2115.96132 1245 2115.96132 1208.24219 1859 1355.84599 1859"></polygon>
+        <polygon id="zone_5_9" stroke="#979797" points="1083.53711 2115.96132 1245 2115.96132 1290.10547 2421 1114 2421"></polygon>
+        <polygon id="zone_5_8" stroke="#979797" points="1245 2115.96132 1408.53516 2115.73066 1471 2421 1290.10547 2421"></polygon>
+        <polygon id="zone_5_5" stroke="#979797" points="778.78125 1859 935.575263 1859 909.5 2116.25 741 2116.5"></polygon>
+        <polygon id="zone_5_1" stroke="#979797" points="926 1956 1067 1956 1098.76876 2264 896.584219 2264"></polygon>
+        <path d="M608.689653,2539.5 L935.023476,2539.5 L925.448213,2636.5 L1067.55518,2636.5 L1057.38162,2539.5 L1355.43806,2539.5 L1470.38716,3100.5 L1114.45384,3100.5 L1099.2226,2943.5 L896.134253,2943.5 L879.550034,3100.5 L500.605527,3100.5 L608.689653,2539.5 Z" id="floor_4" stroke="#979797" fill="url(#linearGradient-1)"></path>
+        <polygon id="zone_4_4" stroke="#979797" points="608.27679 2539 559.503906 2795.96132 741 2795.96132 778.78125 2539"></polygon>
+        <polygon id="zone_4_2" stroke="#979797" points="741 2796.5 696.574219 3101 880 3101 909.5 2796.5"></polygon>
+        <polygon id="zone_4_3" stroke="#979797" points="559.503906 2795.96132 500 3101 696.574219 3101 741 2795.96132"></polygon>
+        <polygon id="zone_4_6" stroke="#979797" points="1208.24219 2539 1245 2795.5 1083.53711 2795.96132 1056.82644 2539"></polygon>
+        <polygon id="zone_4_7" stroke="#979797" points="1408.53516 2795.96132 1245 2795.96132 1208.24219 2539 1355.84599 2539"></polygon>
+        <polygon id="zone_4_9" stroke="#979797" points="1083.53711 2795.96132 1245 2795.96132 1290.10547 3101 1114 3101"></polygon>
+        <polygon id="zone_4_8" stroke="#979797" points="1245 2795.96132 1408.53516 2795.73066 1471 3101 1290.10547 3101"></polygon>
+        <polygon id="zone_4_5" stroke="#979797" points="778.78125 2539 935.575263 2539 909.5 2796.25 741 2796.5"></polygon>
+        <polygon id="zone_4_1" stroke="#979797" points="926 2636 1067 2636 1098.76876 2944 896.584219 2944"></polygon>
+        <path d="M935.023476,3219.5 L925.448213,3316.5 L1067.55518,3316.5 L1057.38162,3219.5 L1355.43806,3219.5 L1470.38716,3780.5 L1114.45384,3780.5 L1099.2226,3623.5 L896.134253,3623.5 L879.550034,3780.5 L500.605527,3780.5 L608.689653,3219.5 L935.023476,3219.5 Z" id="floor_3" stroke="#979797" fill="url(#linearGradient-1)"></path>
+        <polygon id="zone_3_4" stroke="#979797" points="608.27679 3219 559.503906 3475.96132 741 3475.96132 778.78125 3219"></polygon>
+        <polygon id="zone_3_2" stroke="#979797" points="741 3476.5 696.574219 3781 880 3781 909.5 3476.5"></polygon>
+        <polygon id="zone_3_3" stroke="#979797" points="559.503906 3475.96132 500 3781 696.574219 3781 741 3475.96132"></polygon>
+        <polygon id="zone_3_6" stroke="#979797" points="1208.24219 3219 1245 3475.5 1083.53711 3475.96132 1056.82644 3219"></polygon>
+        <polygon id="zone_3_7" stroke="#979797" points="1408.53516 3475.96132 1245 3475.96132 1208.24219 3219 1355.84599 3219"></polygon>
+        <polygon id="zone_3_9" stroke="#979797" points="1083.53711 3475.96132 1245 3475.96132 1290.10547 3781 1114 3781"></polygon>
+        <polygon id="zone_3_8" stroke="#979797" points="1245 3475.96132 1408.53516 3475.73066 1471 3781 1290.10547 3781"></polygon>
+        <polygon id="zone_3_5" stroke="#979797" points="778.78125 3219 935.575263 3219 909.5 3476.25 741 3476.5"></polygon>
+        <polygon id="zone_3_1" stroke="#979797" points="926 3316 1067 3316 1098.76876 3624 896.584219 3624"></polygon>
+        <path d="M935.023476,3899.5 L925.448213,3996.5 L1067.55518,3996.5 L1057.38162,3899.5 L1355.43806,3899.5 L1470.38716,4460.5 L1114.45384,4460.5 L1099.2226,4303.5 L896.134253,4303.5 L879.550034,4460.5 L500.605527,4460.5 L608.689653,3899.5 L935.023476,3899.5 Z" id="floor_2" stroke="#979797" fill="url(#linearGradient-1)"></path>
+        <polygon id="zone_2_4" stroke="#979797" points="608.27679 3899 559.503906 4155.96132 741 4155.96132 778.78125 3899"></polygon>
+        <polygon id="zone_2_2" stroke="#979797" points="741 4156.5 696.574219 4461 880 4461 909.5 4156.5"></polygon>
+        <polygon id="zone_2_3" stroke="#979797" points="559.503906 4155.96132 500 4461 696.574219 4461 741 4155.96132"></polygon>
+        <polygon id="zone_6" stroke="#979797" points="1208.24219 3899 1245 4155.5 1083.53711 4155.96132 1056.82644 3899"></polygon>
+        <polygon id="zone_2_7" stroke="#979797" points="1408.53516 4155.96132 1245 4155.96132 1208.24219 3899 1355.84599 3899"></polygon>
+        <polygon id="zone_2_9" stroke="#979797" points="1083.53711 4155.96132 1245 4155.96132 1290.10547 4461 1114 4461"></polygon>
+        <polygon id="zone_2_8" stroke="#979797" points="1245 4155.96132 1408.53516 4155.73066 1471 4461 1290.10547 4461"></polygon>
+        <polygon id="zone_2_5" stroke="#979797" points="778.78125 3899 935.575263 3899 909.5 4156.25 741 4156.5"></polygon>
+        <polygon id="zone_2_1" stroke="#979797" points="926 3996 1067 3996 1098.76876 4304 896.584219 4304"></polygon>
+        <text id="Day" font-family="Helvetica-Light, Helvetica" font-size="100" font-weight="300" fill="#000000">
+            <tspan x="0" y="97">Day</tspan>
+        </text>
+        <text id="Building-6" font-family="Helvetica-Light, Helvetica" font-size="72" font-weight="300" fill="#565656">
+            <tspan x="0" y="269">Building 6</tspan>
+        </text>
+        <text id="123" font-family="Helvetica-Light, Helvetica" font-size="72" font-weight="300" fill="#565656">
+            <tspan x="2167" y="1668">Building 31</tspan>
+        </text>
+        <rect id="zone_b31" stroke="#979797" x="2105.5" y="1582.5" width="487" height="120"></rect>
+        <text id="zone_b31-copy" font-family="Helvetica-Light, Helvetica" font-size="72" font-weight="300" fill="#565656">
+            <tspan x="2236" y="1877">Off site</tspan>
+        </text>
+        <rect id="offSite" stroke="#979797" x="2105.5" y="1791.5" width="487" height="120"></rect>
+        <text id="dayNumber" font-family="Helvetica-Light, Helvetica" font-size="100" font-weight="300" fill="#000000">
+            <tspan x="218" y="97">—</tspan>
+        </text>
+    </g>`
     const newDay = `<g id="day__DAY_NUMBER__" transform = "translate(__X_INCREMENT__, 0)">
     <path d="M1087.38162,521.5 L1385.43806,521.5 L1500.38716,1082.5 L1144.45384,1082.5 L1129.2226,925.5 L926.134253,925.5 L909.550034,1082.5 L530.605527,1082.5 L638.689653,521.5 L965.023476,521.5 L955.448213,618.5 L1097.55518,618.5 L1087.38162,521.5 Z" id="Combined-Shape-Copy-6" stroke="#979797" fill="url(#linearGradient-1)"></path>
     <polygon id="zone_7_1" stroke="#979797" fill="#D8D8D8" points="956 618 1097 618 1128.76876 926 926.584219 926"></polygon>
@@ -280,11 +359,12 @@ ws.onmessage = function (e) {
         dayNumber = message.payload[0].phase;
         if (dayNumber >= 2) {
             const newElement = svgDoc2.createElement('g');
-            const newDayWithDayNumber = newDay.replace("__DAY_NUMBER__", dayNumber);
+            const newDayWithDayNumber = newDay1.replace("__DAY_NUMBER__", dayNumber);
             const newDayWithXIncrement = newDayWithDayNumber.replace("__X_INCREMENT__", dayNumber * 3000);
             newElement.innerHTML = newDayWithXIncrement;
             svgArea2.innerHTML += newDayWithXIncrement;
         }
+
         const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
         for (item of message.payload) {
             if (item.type === 'variable') {
@@ -304,60 +384,56 @@ ws.onmessage = function (e) {
                     if (svgObject.style == undefined) {
                         svgObject.style = {};
                     }
-                    svgObject.style.fill = item[key].color;
-                    svgObject.style.stroke = item[key].borderColor;
-
-                    if (item[key].arrowStartingPoint !== undefined) {
-                        let x1;
-                        let y1;
-                        let x2;
-                        let y2;
-                        console.log(key);
-                        const startingPoint = svgDoc2.getElementById(item[key].arrowStartingPoint);
-                        console.log(startingPoint);
-                        if (startingPoint.points !== undefined) {
-                            const startingPointCoordinates = [...startingPoint.points];
-                            x1 = startingPointCoordinates[0].x;
-                            y1 = startingPointCoordinates[0].y;
-                        }
-                        else {
-                            x1 = startingPoint.x.baseVal.value;
-                            y1 = startingPoint.y.baseVal.value;
-                        }
-                        const endPoint = svgDoc2.getElementById(item[key].arrowEndPoint);
-                        console.log(endPoint);
-                        if (endPoint.points !== undefined) {
-                            const endPointCoordinates = [...endPoint.points];
-                            x2 = endPointCoordinates[0].x;
-                            y2 = endPointCoordinates[0].y;
-                        }
-                        else {
-                            x2 = endPoint.x.baseVal.value;
-                            y2 = endPoint.y.baseVal.value;
-                        }
-                        currentDay.innerHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-dasharray="5,17"></line>
-                                                                    <circle stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="${x1}" cy="${y1}" r="10.5"></circle>
-                        <path d="M1303,1522 C1321.2254,1522 1336,1536.78434 1336,1555.02174 C1336,1567.18001 1325,1587.17276 1303,1615 C1281,1587.17276 1270,1567.18001 1270,1555.02174 C1270,1536.78434 1284.7746,1522 1303,1522 Z M1303.5,1541 C1295.49187,1541 1289,1547.49187 1289,1555.5 C1289,1563.50813 1295.49187,1570 1303.5,1570 C1311.50813,1570 1318,1563.50813 1318,1555.5 C1318,1547.49187 1311.50813,1541 1303.5,1541 Z" fill="#D64E4E" transform = "translate(${x2 - 1300},${y2 - 1600})"></path>`
+                    if (item[key].type !== 'ConstructionWholeFloor') {
+                        svgObject.style.fill = item[key].color;
                     }
+
+                    svgObject.style.stroke = item[key].borderColor;
+                    if (item[key].type === 'construction') {
+                        svgObject.style.fillOpacity = "0.6";
+                    }
+                    // if (item[key].type === 'ConstructionWholeFloor') {
+                    //     const floor = item[key].floor;
+                    //     const floorObject = currentDay.querySelector(`#floor_${floor}`);
+                    //     floorObject.style.fillOpacity = "0.6";
+                    //     floorObject.style.fill = item[key].color;
+                    // }
+
+                    // if (item[key].arrowStartingPoint !== undefined) {
+                    //     let x1;
+                    //     let y1;
+                    //     let x2;
+                    //     let y2;
+                    //     console.log(key);
+                    //     const startingPoint = svgDoc2.getElementById(item[key].arrowStartingPoint);
+                    //     console.log(startingPoint);
+                    //     if (startingPoint.points !== undefined) {
+                    //         const startingPointCoordinates = [...startingPoint.points];
+                    //         x1 = startingPointCoordinates[0].x;
+                    //         y1 = startingPointCoordinates[0].y;
+                    //     }
+                    //     else {
+                    //         x1 = startingPoint.x.baseVal.value;
+                    //         y1 = startingPoint.y.baseVal.value;
+                    //     }
+                    //     const endPoint = svgDoc2.getElementById(item[key].arrowEndPoint);
+                    //     console.log(endPoint);
+                    //     if (endPoint.points !== undefined) {
+                    //         const endPointCoordinates = [...endPoint.points];
+                    //         x2 = endPointCoordinates[0].x;
+                    //         y2 = endPointCoordinates[0].y;
+                    //     }
+                    //     else {
+                    //         x2 = endPoint.x.baseVal.value;
+                    //         y2 = endPoint.y.baseVal.value;
+                    //     }
+                    //     currentDay.innerHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-dasharray="5,17"></line>
+                    //                                                 <circle stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="${x1}" cy="${y1}" r="10.5"></circle>
+                    //     <path d="M1303,1522 C1321.2254,1522 1336,1536.78434 1336,1555.02174 C1336,1567.18001 1325,1587.17276 1303,1615 C1281,1587.17276 1270,1567.18001 1270,1555.02174 C1270,1536.78434 1284.7746,1522 1303,1522 Z M1303.5,1541 C1295.49187,1541 1289,1547.49187 1289,1555.5 C1289,1563.50813 1295.49187,1570 1303.5,1570 C1311.50813,1570 1318,1563.50813 1318,1555.5 C1318,1547.49187 1311.50813,1541 1303.5,1541 Z" fill="#D64E4E" transform = "translate(${x2 - 1300},${y2 - 1600})"></path>`
+                    // }
                 })
 
             }
-            //     if (item.status === 'finished') {
-            //         for (const zone of item.toObjects) {
-            //             if (zone !== 'zone_b31' && zone !== 'offSite') {
-            //                 const currentDay = svgDoc2.getElementById(`day${dayNumber}`);
-            //                 const svgObject = currentDay.querySelector(`#${zone}`);
-            //                 if (svgObject.style == undefined) {
-            //                     svgObject.style = {};
-            //                 }
-            //                 svgObject.style.fill = item.color;
-            //                 svgObject.style.stroke = item.borderColor;
-            //             }
-
-
-            //         }
-            //     }
-
         }
     }
 
