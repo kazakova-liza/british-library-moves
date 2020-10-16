@@ -2,15 +2,20 @@ import getter from '../airtable/getter.js';
 import cache from '../cache.js';
 
 const createDay = async (phase) => {
+    console.log(phase);
+    if (phase === 0) {
+        cache.timeline = {};
+    }
     cache.transitionDays = cache.transitionDays.filter((day, i) => cache.transitionDays.indexOf(day) === i);
     cache.transitionDays = cache.transitionDays.sort((a, b) => a - b);
     const currentDay = cache.transitionDays[phase];
     let objectsUpdate = [];
-    // console.log(`phase: ${phase}`);
+    console.log(`phase: ${phase}`);
+    console.log(cache.timeline);
     if (phase !== 0) {
         const previousDay = cache.transitionDays[phase - 1];
         // console.log(`previous day: ${previousDay}`);
-        // console.log(cache.timeline);
+
         cache.timeline[currentDay] = cache.timeline[previousDay];
     }
     else {
@@ -38,6 +43,7 @@ const createDay = async (phase) => {
             let arrowStartingPoint = '';
             let arrowEndPoint = '';
             let fillOpacity;
+            let borderColor;
 
             if (move.fromZone.length === 1) {
                 arrowStartingPoint = `zone_${floor}_${move.fromZone[0]}`;
@@ -91,6 +97,7 @@ const createDay = async (phase) => {
                     type = 'move';
                     color = collectionColor;
                     fillOpacity = '1';
+                    borderColor = '#000000';
                 }
                 if (move.type === 'Construction') {
                     color = 'url(#pattern-2)';
@@ -106,8 +113,10 @@ const createDay = async (phase) => {
                 }
                 if (currentDay === move.endDay) {
                     color = '#ffffff';
+                    borderColor = '#000000';
                     arrowStartingPoint = undefined;
                     arrowEndPoint = undefined;
+                    fillOpacity = '1';
 
                     toObjects.map((toObject) => {
                         cache.timeline[currentDay][toObject] = {
@@ -115,6 +124,7 @@ const createDay = async (phase) => {
                             type,
                             svg: 2,
                             color: '',
+                            borderColor: "#979797",
                             phase: phase + 1,
                             fillOpacity: '1',
                             arrowStartingPoint: undefined,
@@ -129,7 +139,7 @@ const createDay = async (phase) => {
                     type,
                     svg: 2,
                     color,
-                    borderColor: '#000000',
+                    borderColor,
                     phase: phase + 1,
                     fillOpacity,
                     arrowStartingPoint,

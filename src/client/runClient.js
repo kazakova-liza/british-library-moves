@@ -408,7 +408,7 @@ ws.onmessage = function (e) {
                         let y2;
                         console.log(key);
                         const startingPoint = svgDoc2.getElementById(item[key].arrowStartingPoint);
-                        console.log(startingPoint);
+
                         if (startingPoint.points !== undefined) {
                             const startingPointCoordinates = [...startingPoint.points];
                             x1 = startingPointCoordinates[0].x;
@@ -419,7 +419,7 @@ ws.onmessage = function (e) {
                             y1 = startingPoint.y.baseVal.value;
                         }
                         const endPoint = svgDoc2.getElementById(item[key].arrowEndPoint);
-                        console.log(endPoint);
+
                         if (endPoint.points !== undefined) {
                             const endPointCoordinates = [...endPoint.points];
                             x2 = endPointCoordinates[0].x;

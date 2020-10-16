@@ -4,6 +4,7 @@ import objects from '../objects.js';
 const createGanttChart = () => {
     let svgUpdate = [];
     let totalLengthMoved = 0;
+    cache.transitionDays = [];
     cache.moves.map((move) => {
         let value;
         let startDay;
