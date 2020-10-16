@@ -37,6 +37,7 @@ const createDay = async (phase) => {
             let toObjects = [];
             let arrowStartingPoint = '';
             let arrowEndPoint = '';
+            let fillOpacity;
 
             if (move.fromZone.length === 1) {
                 arrowStartingPoint = `zone_${floor}_${move.fromZone[0]}`;
@@ -89,18 +90,25 @@ const createDay = async (phase) => {
                 if (move.type === 'Move') {
                     type = 'move';
                     color = collectionColor;
+                    fillOpacity = '1';
                 }
                 if (move.type === 'Construction') {
                     color = 'url(#pattern-2)';
+                    fillOpacity = '0.6';
                     // if (fromZones.length === 9) {
                     //     type = 'ConstructionWholeFloor';
                     // }
                     // else {
                     type = 'construction';
+                    arrowStartingPoint = undefined;
+                    arrowEndPoint = undefined;
                     // }
                 }
                 if (currentDay === move.endDay) {
                     color = '#ffffff';
+                    arrowStartingPoint = undefined;
+                    arrowEndPoint = undefined;
+
                     toObjects.map((toObject) => {
                         cache.timeline[currentDay][toObject] = {
                             ref: move.ref,
@@ -108,6 +116,7 @@ const createDay = async (phase) => {
                             svg: 2,
                             color: '',
                             phase: phase + 1,
+                            fillOpacity: '1',
                             arrowStartingPoint: undefined,
                             arrowEndPoint: undefined,
                             floor: move.floor,
@@ -122,6 +131,7 @@ const createDay = async (phase) => {
                     color,
                     borderColor: '#000000',
                     phase: phase + 1,
+                    fillOpacity,
                     arrowStartingPoint,
                     arrowEndPoint,
                     floor: move.floor,

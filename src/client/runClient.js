@@ -393,17 +393,13 @@ ws.onmessage = function (e) {
                         }
 
                     }
-
                     svgObject.style.stroke = item[key].borderColor;
-                    if (item[key].type === 'construction') {
-                        svgObject.style.fillOpacity = "0.6";
-                    }
                     if (item[key].type === 'ConstructionWholeFloor') {
                         const floor = item[key].floor;
                         const floorObject = currentDay.querySelector(`#floor_${floor}`);
-                        floorObject.style.fillOpacity = "0.6";
                         floorObject.style.fill = item[key].color;
                     }
+                    svgObject.style.fillOpacity = item[key].fillOpacity;
 
                     if (item[key].arrowStartingPoint !== undefined) {
                         let x1;
