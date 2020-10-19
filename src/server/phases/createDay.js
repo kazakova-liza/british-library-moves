@@ -2,20 +2,17 @@ import getter from '../airtable/getter.js';
 import cache from '../cache.js';
 
 const createDay = async (phase) => {
-    console.log(phase);
     if (phase === 0) {
         cache.timeline = {};
     }
     cache.transitionDays = cache.transitionDays.filter((day, i) => cache.transitionDays.indexOf(day) === i);
     cache.transitionDays = cache.transitionDays.sort((a, b) => a - b);
+
     const currentDay = cache.transitionDays[phase];
     let objectsUpdate = [];
-    console.log(`phase: ${phase}`);
-    console.log(cache.timeline);
+
     if (phase !== 0) {
         const previousDay = cache.transitionDays[phase - 1];
-        // console.log(`previous day: ${previousDay}`);
-
         cache.timeline[currentDay] = cache.timeline[previousDay];
     }
     else {
@@ -31,6 +28,7 @@ const createDay = async (phase) => {
     })
 
     const colors = await getter('collections');
+
     cache.processedMoves.filter((move) => move.startDay <= currentDay && move.endDay >= currentDay)
         .map((move) => {
             const floor = move.floor;
@@ -38,7 +36,6 @@ const createDay = async (phase) => {
             const toBuilding = move.toBuilding;
             const fromZones = move.fromZone.split(",");
             const toZones = move.toZone.split(",");
-            console.log(fromZones);
             let toObjects = [];
             let arrowStartingPoint = '';
             let arrowEndPoint = '';
@@ -58,11 +55,10 @@ const createDay = async (phase) => {
                 if (toBuilding === 'B31') {
                     arrowEndPoint = 'zone_b31';
                 }
-                if (toBuilding === 'Off site') {
+                else if (toBuilding === 'Off site') {
                     arrowEndPoint = 'offSite';
                 }
-
-                if (toZones.length === 1 && toBuilding !== 'B31' && toBuilding !== 'Off site') {
+                else if (toZones.length === 1 && toBuilding !== 'B31' && toBuilding !== 'Off site') {
                     arrowEndPoint = `zone_${toFloor}_${toZones}`;
                 }
                 if (toZones.length > 1)
@@ -76,19 +72,17 @@ const createDay = async (phase) => {
 
             const fromObjects = fromZones.map((zone) => `zone_${floor}_${zone}`);
             toObjects = toZones.map((zone) => {
-                if (move.toBuilding !== 'B31' && move.toBuilding !== 'Off site') {
-                    return `zone_${toFloor}_${zone}`;
-                }
                 if (move.toBuilding === 'B31') {
                     return 'zone_b31';
                 }
-                if (move.toBuilding === 'Off site') {
+                else if (move.toBuilding === 'Off site') {
                     return 'offSite'
+                }
+                else {
+                    return `zone_${toFloor}_${zone}`;
                 }
 
             })
-            console.log(`move: ${JSON.stringify(move)}`);
-            console.log(`toObjects: ${JSON.stringify(toObjects)}`);
 
             fromObjects.map((fromObject) => {
                 let color;
@@ -102,10 +96,6 @@ const createDay = async (phase) => {
                 if (move.type === 'Construction') {
                     color = 'url(#pattern-2)';
                     fillOpacity = '0.6';
-                    // if (fromZones.length === 9) {
-                    //     type = 'ConstructionWholeFloor';
-                    // }
-                    // else {
                     type = 'construction';
                     arrowStartingPoint = undefined;
                     arrowEndPoint = undefined;
