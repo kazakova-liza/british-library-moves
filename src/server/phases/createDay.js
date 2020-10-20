@@ -108,21 +108,25 @@ const createDay = async (phase) => {
                     arrowEndPoint = undefined;
                     fillOpacity = '1';
 
-                    toObjects.map((toObject) => {
-                        cache.timeline[currentDay][toObject] = {
-                            ref: move.ref,
-                            type,
-                            svg: 2,
-                            color: '',
-                            borderColor: "#979797",
-                            phase: phase + 1,
-                            fillOpacity: '1',
-                            arrowStartingPoint: undefined,
-                            arrowEndPoint: undefined,
-                            floor: move.floor,
+                    if (move.type !== 'Construction') {
+                        toObjects.map((toObject) => {
+                            cache.timeline[currentDay][toObject] = {
+                                ref: move.ref,
+                                type,
+                                svg: 2,
+                                color: '',
+                                borderColor: "#979797",
+                                phase: phase + 1,
+                                fillOpacity: '1',
+                                arrowStartingPoint: undefined,
+                                arrowEndPoint: undefined,
+                                floor: move.floor,
 
-                        }
-                    })
+                            }
+                        })
+                    }
+
+
                 }
                 cache.timeline[currentDay][fromObject] = {
                     ref: move.ref,
