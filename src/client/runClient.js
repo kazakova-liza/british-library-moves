@@ -304,23 +304,14 @@ ws.onmessage = function (e) {
                     if (svgObject.style == undefined) {
                         svgObject.style = {};
                     }
-                    // if (item[key].type !== 'ConstructionWholeFloor') {
                     if (item[key].color === '') {
                         svgObject.style.fill = 'none';
                     }
                     else {
                         svgObject.style.fill = item[key].color;
                     }
-
-                    // }
                     svgObject.style.fillOpacity = item[key].fillOpacity;
                     svgObject.style.stroke = item[key].borderColor;
-                    // if (item[key].type === 'ConstructionWholeFloor') {
-                    //     const floor = item[key].floor;
-                    //     const floorObject = currentDay.querySelector(`#floor_${floor}`);
-                    //     floorObject.style.fill = item[key].color;
-                    // }
-
 
                     if (item[key].arrowStartingPoint !== undefined) {
                         let x1;
@@ -385,8 +376,11 @@ ws.onmessage = function (e) {
             if (element.type === 'Move') {
                 color = '#73B7D5';
             }
-            else {
+            else if (element.type === 'Construction') {
                 color = '#E1D382';
+            }
+            else {
+                color = '#EE8E8E';
             }
             if (element.number === 1) {
                 svgArea.innerHTML = svgArea.innerHTML + `<rect xmlns="http://www.w3.org/2000/svg" id = "Rectangle100" class="rectangle" fill = "${color}" x = "${x1.toString()}" y = "${y1.toString()}" width = "${width.toString()}" height = "51"></rect>`;

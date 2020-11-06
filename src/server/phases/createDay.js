@@ -33,104 +33,93 @@ const createDay = async (phase) => {
         .map((move) => {
             const floor = move.floor;
             const toFloor = move.toFloor;
-            const toBuilding = move.toBuilding;
             const fromZones = move.fromZone.split(",");
             const toZones = move.toZone.split(",");
-            let toObjects = [];
-            let arrowStartingPoint = '';
-            let arrowEndPoint = '';
-            let fillOpacity;
-            let borderColor;
+            let arrowEndPoint;
+            let collectionColor;
+            let arrowStartingPoint = `zone_${floor}_${fromZones[0]}`;
 
-            if (move.fromZone.length === 1) {
-                arrowStartingPoint = `zone_${floor}_${move.fromZone[0]}`;
-            }
-            if (fromZones.length < 9 && fromZones.length > 1) {
-                arrowStartingPoint = `zone_${floor}_${fromZones[1]}`;
-            }
-            if (fromZones.length === 9) {
-                arrowStartingPoint = `zone_${floor}_${1}`;
-            }
-            if (move.type !== "Construction") {
-                if (toBuilding === 'B31') {
-                    arrowEndPoint = 'zone_b31';
-                }
-                else if (toBuilding === 'Off site') {
-                    arrowEndPoint = 'offSite';
-                }
-                else if (toZones.length === 1 && toBuilding !== 'B31' && toBuilding !== 'Off site') {
-                    arrowEndPoint = `zone_${toFloor}_${toZones}`;
-                }
-                if (toZones.length > 1)
-                    arrowEndPoint = `zone_${toFloor}_${toZones[1]}`;
-            }
-
-            let collectionColor = colors.find((col) => col.collection === move.collection);
-            if (collectionColor !== undefined) {
-                collectionColor = collectionColor.collectionColor;
+            if (move.type === 'Move') {
+                collectionColor = colors.find((col) => col.collection === move.collection).collectionColor;
             }
 
             const fromObjects = fromZones.map((zone) => `zone_${floor}_${zone}`);
-            toObjects = toZones.map((zone) => {
+            const toObjects = toZones.map((zone) => {
                 if (move.toBuilding === 'B31') {
+                    arrowEndPoint = 'zone_b31';
                     return 'zone_b31';
                 }
+                if (move.toBuilding === 'B23') {
+                    arrowEndPoint = 'zone_b23';
+                    return 'zone_b23';
+                }
+                if (move.toBuilding === 'B24') {
+                    arrowEndPoint = 'zone_b24';
+                    return 'zone_b24';
+                }
                 else if (move.toBuilding === 'Off site') {
-                    return 'offSite'
+                    arrowEndPoint = 'offSite';
+                    return 'offSite';
                 }
                 else {
+                    arrowEndPoint = `zone_${toFloor}_${toZones[0]}`;
                     return `zone_${toFloor}_${zone}`;
                 }
-
             })
 
-            fromObjects.map((fromObject) => {
+            fromObjects.map((object) => {
+                let fillOpacity = '1';
+                let borderColor = '#000000';
                 let color;
-                let type;
+
                 if (move.type === 'Move') {
-                    type = 'move';
                     color = collectionColor;
-                    fillOpacity = '1';
-                    borderColor = '#000000';
                 }
                 if (move.type === 'Construction') {
                     color = 'url(#pattern-2)';
                     fillOpacity = '0.6';
-                    type = 'construction';
+                    borderColor = undefined;
                     arrowStartingPoint = undefined;
                     arrowEndPoint = undefined;
-                    // }
+                }
+                if (move.type === 'Renovation') {
+                    color = 'url(#pattern-3)';
+                    fillOpacity = '0.6';
+                    borderColor = undefined;
+                    arrowStartingPoint = undefined;
+                    arrowEndPoint = undefined;
                 }
                 if (currentDay === move.endDay) {
-                    color = '#ffffff';
-                    borderColor = '#000000';
-                    arrowStartingPoint = undefined;
-                    arrowEndPoint = undefined;
-                    fillOpacity = '1';
-
-                    if (move.type !== 'Construction') {
-                        toObjects.map((toObject) => {
-                            cache.timeline[currentDay][toObject] = {
+                    if (move.type === 'Move') {
+                        arrowStartingPoint = undefined;
+                        arrowEndPoint = undefined;
+                        color = '#ffffff';
+                        toObjects.map((object) => {
+                            cache.timeline[currentDay][object] = {
                                 ref: move.ref,
-                                type,
+                                type: move.type,
                                 svg: 2,
                                 color: '',
                                 borderColor: "#979797",
                                 phase: phase + 1,
-                                fillOpacity: '1',
-                                arrowStartingPoint: undefined,
-                                arrowEndPoint: undefined,
-                                floor: move.floor,
+                                fillOpacity,
+                                arrowStartingPoint,
+                                arrowEndPoint,
+                                floor: toFloor,
 
                             }
                         })
                     }
-
-
+                    else if (move.type === 'Renovation') {
+                        color = collectionColor;
+                    }
+                    else {
+                        color = '#ffffff';
+                    }
                 }
-                cache.timeline[currentDay][fromObject] = {
+                cache.timeline[currentDay][object] = {
                     ref: move.ref,
-                    type,
+                    type: move.type,
                     svg: 2,
                     color,
                     borderColor,
