@@ -260,6 +260,18 @@ ws.onmessage = function (e) {
             <tspan x="2236" y="1877">Off site</tspan>
         </text>
         <rect id="offSite" stroke="#979797" x="2105.5" y="1791.5" width="487" height="120"></rect>
+        <g id="building_23" transform="translate(2170.000000, 2011.000000)" fill="#565656" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-size="72" font-weight="300">
+                <text id="Building-23">
+                    <tspan x="0" y="69">Building 23</tspan>
+                </text>
+        </g>
+        <g id="building24" transform="translate(2105.000000, 2001.000000)">
+                <text id="text" fill="#565656" fill-rule="nonzero" font-family="Helvetica-Light, Helvetica" font-size="72" font-weight="300">
+                    <tspan x="62" y="297">Building 24</tspan>
+                </text>
+                <rect id="zone_b23" stroke="#979797" x="7.5" y="0.5" width="480" height="104"></rect>
+                <rect id="zone_b24" stroke="#979797" x="0.5" y="210.5" width="487" height="120"></rect>
+        </g>
         <text id="dayNumber" font-family="Helvetica-Light, Helvetica" font-size="100" font-weight="300" fill="#000000">
             <tspan x="218" y="97">—</tspan>
         </text>
