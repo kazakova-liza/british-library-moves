@@ -572,7 +572,7 @@ const objects = {
         {
             number: 57,
             name: '57',
-            function: createGanttChart,
+            function: createDay,
             textOnProcessing: 'processing',
             textOnCompletion: 'finished',
             async: false,
