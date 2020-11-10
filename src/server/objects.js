@@ -469,7 +469,7 @@ const objects = {
             svgTransitionElementId: undefined,
             svgShowOnTransitionId: undefined
         },
-		{
+        {
             number: 47,
             name: '47',
             function: createDay,
@@ -569,8 +569,246 @@ const objects = {
             svgTransitionElementId: undefined,
             svgShowOnTransitionId: undefined
         },
-
-
+        {
+            number: 57,
+            name: '57',
+            function: createGanttChart,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 58,
+            name: '58',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 59,
+            name: '59',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 60,
+            name: '60',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 61,
+            name: '61',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 62,
+            name: '62',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 63,
+            name: '63',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 64,
+            name: '64',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 65,
+            name: '65',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 66,
+            name: '66',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 67,
+            name: '67',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 68,
+            name: '68',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 69,
+            name: '69',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 70,
+            name: '70',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 71,
+            name: '71',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 72,
+            name: '72',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 73,
+            name: '73',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 74,
+            name: '74',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 75,
+            name: '75',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 76,
+            name: '76',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 77,
+            name: '77',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 78,
+            name: '78',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 79,
+            name: '79',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
+        {
+            number: 80,
+            name: '80',
+            function: createDay,
+            textOnProcessing: 'processing',
+            textOnCompletion: 'finished',
+            async: false,
+            svgTransitionElementId: undefined,
+            svgShowOnTransitionId: undefined
+        },
     ],
     speeds: {
         A: 0.2,

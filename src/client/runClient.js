@@ -375,12 +375,12 @@ ws.onmessage = function (e) {
             }
             const startingPoint = ganttChartContent.getElementById('line_1');
             const pixelsPerDay = 4.9;
-            const pixelsPerMove = 65;
+            const pixelsPerMove = 64;
             const x0 = parseInt(startingPoint.attributes["x1"].value);
             const y0 = parseInt(startingPoint.attributes["y1"].value);
             let color;
             const x1 = x0;
-            const y1 = y0;
+            const y1 = y0 + 4;
             const xn = x1 - 5 + pixelsPerDay * element.startDay;
             const yn = y1 + pixelsPerMove * (element.number - 1);
             const width = pixelsPerDay * element.duration;

@@ -10,6 +10,7 @@ const execute = async (numberOfPeriodsToExecute, phase = cache.currentPhase) => 
     }
     const dtes = periods;
     console.log('dtes = ', dtes.length);
+    console.log('phase = ', phase);
 
     for (let i = cache.currentPeriod; i < cache.currentPeriod + parseInt(numberOfPeriodsToExecute); i++) {
         cache.thisDte = dtes[i].dte;
